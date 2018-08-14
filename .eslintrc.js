@@ -8,14 +8,19 @@ module.exports = {
     parser: 'babel-eslint'
   },
   extends: [
-    // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
-    // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
-    'plugin:vue/essential'
+    'plugin:vue/recommended',
   ],
   // required to lint *.vue files
   plugins: [
-    'vue'
+    'vue',
   ],
-  // add your custom rules here
-  rules: {}
+  rules: {
+    "semi": ["error", "always"],
+    "comma-dangle": ["error", "always-multiline"],
+    "no-multiple-empty-lines": [2, { "max": 2, "maxEOF": 1 }],
+    "space-before-blocks": ["error", "always"],
+    "space-before-function-paren": ["error", "never"],
+    'no-trailing-spaces': ["error", { "ignoreComments": true }],
+    'no-param-reassign': 0,
+  },
 }
