@@ -61,6 +61,11 @@ module.exports = {
       'vue-the-mask',
     ],
   },
+  router: {
+    middleware: [
+      'isMobile',
+    ],
+  },
   plugins: [
     { src: '~/plugins/svgSpriteLoader', ssr: false },
     { src: '~/plugins/clickOutside', ssr: false },
