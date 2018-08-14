@@ -33,7 +33,40 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
-  }
+      /**
+       * Добавление svg спрайт генератора
+       */
+      const rule = config.module.rules.find(r => r.test.toString() === '/\\.(png|jpe?g|gif|svg)$/');
+      config.module.rules.splice(config.module.rules.indexOf(rule), 1);
+
+      config.module.rules.push({
+        test: /\.(png|jpe?g|gif|svg)$/,
+        loader: 'url-loader',
+        exclude: /(assets\/img\/sprite\/svg)/,
+        query: {
+          limit: 1000,
+          name: 'img/[name].[hash:7].[ext]',
+        },
+      });
+
+      config.module.rules.push({
+        test: /\.svg$/,
+        include: /assets\/img\/sprite\/svg/,
+        use: 'svg-sprite-loader',
+      });
+    },
+
+    vendor: [
+      'v-click-outside',
+      'vue-the-mask',
+    ],
+  },
+  plugins: [
+    { src: '~/plugins/svgSpriteLoader', ssr: false },
+    { src: '~/plugins/clickOutside', ssr: false },
+    { src: '~/plugins/vMask', ssr: false },
+    { src: '~/plugins/outline', ssr: false },
+    { src: '~/plugins/preventScroll', ssr: false },
+  ],
 }
 
