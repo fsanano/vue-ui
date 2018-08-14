@@ -1,11 +1,13 @@
 <template>
-  <div class="header__container">
-    <div class="header__logo">
-      <img
-        src="~static/logo.png"
-        alt="logo">
+  <header class="header__container">
+    <div class="container-fluid d-flex">
+      <div class="header__logo">
+        <img
+          src="~/assets/img/logo.png"
+          alt="logo">
+      </div>
     </div>
-  </div>
+  </header>
 </template>
 
 <script>
@@ -36,11 +38,20 @@ export default {
 </script>
 
 <style lang="sass">
-  @import '@/assets/sass/common.sass'
+  @import '@/assets/sass/vars.sass'
+  .header__container
+    height: 90px
+    border: 1px solid rgba(white, .15)
+
+  .header__logo
+    padding: 15px 0
+    width: 89px
+    img
+      width: 100%
 </style>
 
 <docs>
 ```
-<Boilerplate/>
+<TheHeader/>
 ```
 </docs>

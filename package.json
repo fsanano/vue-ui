@@ -17,6 +17,7 @@
   "dependencies": {
     "normalize.css": "^8.0.0",
     "nuxt": "^1.0.0",
+    "nuxt-imagemin": "^0.1.2",
     "outline.js": "github:lindsayevans/outline.js",
     "svg-sprite-loader": "^3.8.0",
     "v-click-outside": "^1.0.5",

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <TheHeader/>
     <nuxt/>
   </div>
@@ -17,5 +17,7 @@
 <style lang="sass">
   @import "normalize.css"
   @import "@/assets/sass/common.sass"
+  .container
+    background-color: grey
 </style>
 

@@ -62,6 +62,9 @@ module.exports = {
       'vue-the-mask',
     ],
   },
+  modules: [
+    'nuxt-imagemin',
+  ],
   router: {
     middleware: [
       'isMobile',
