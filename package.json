@@ -17,7 +17,7 @@
   "dependencies": {
     "normalize.css": "^8.0.0",
     "nuxt": "^1.0.0",
-    "outline.js": "^0.1.1",
+    "outline.js": "github:lindsayevans/outline.js",
     "svg-sprite-loader": "^3.8.0",
     "v-click-outside": "^1.0.5",
     "vue-the-mask": "^0.11.1"
@@ -29,6 +29,7 @@
     "eslint-loader": "^1.7.1",
     "eslint-plugin-vue": "^4.0.0",
     "node-sass": "^4.9.3",
-    "sass-loader": "^7.1.0"
+    "sass-loader": "^7.1.0",
+    "vue-styleguidist": "^1.7.13"
   }
 }
