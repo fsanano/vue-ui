@@ -1,0 +1,14 @@
+@mixin above($point)
+  @media (min-width: $point)
+    @content
+
+@mixin below($point)
+  @media (max-width: $point)
+    @content
+
+@mixin below-h($point)
+  @media (max-height: $point)
+    @content
+@mixin above-h($point)
+  @media (min-height: $point)
+    @content

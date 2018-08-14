@@ -1,0 +1,67 @@
+@import ./vars.sass
+@import ./mixins.sass
+
+// Враппер грида 
+.container-fluid
+  width: 100%
+  padding: 0 15px
+
+// Строка грида 
+.row
+  display: flex
+  margin-left: -15px
+  margin-right: -15px
+  flex-flow: row wrap
+
+// Ячейки грида
+[class*="col-"]
+  display: flex
+  align-items: flex-end
+  padding: 0 15px
+
+.col-6
+  width: 50%
+
+.col-4
+  width: calc(100%/3)
+
+.col-3
+  width: calc(100%/4)
+
+.col-12
+  width: 100%
+
+.col-md-6
+  +below($md)
+    width: 50%
+
+.col-sm-6
+  +below($sm)
+    width: 50%
+
+.col-sm-12
+  +below($sm)
+    width: 100%
+
+.d-none
+  display: none
+
+.d-flex
+  display: flex
+
+// Выравнивание контента
+.justify-content-around
+  justify-content: space-around
+
+.justify-content-between
+  justify-content: space-between
+
+.justify-content-center
+  justify-content: center
+
+.align-items-center
+  align-items: center
+
+.w-sm-100
+  +below($sm)
+    width: 100%

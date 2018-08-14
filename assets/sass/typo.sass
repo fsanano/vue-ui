@@ -1,0 +1,55 @@
+@import ./vars.sass
+@import ./mixins.sass
+
+.h1
+  font-size: 56px
+  +below($sm)
+    font-size: 33px
+.h3
+  font-size: 29px
+  font-weight: bold
+  +below($sm)
+    font-size: 22px
+
+
+// Размеры текста 
+.text
+  font-size: 20px
+  line-height: 1.25
+
+.text--medium
+  font-size: 15px
+
+.text--small
+  font-size: 13px
+
+// Начертание
+.text--bold
+  font-weight: bold
+
+.text-center
+  text-align: center
+
+//Цвета текста 
+.text--accent
+  color: $accent
+
+.text--primary
+  color: $primary-color
+
+.text--secondary
+  color: $secondary
+
+.text--light
+  color: $disabled-color
+
+.text--disabled
+  color: $disabled-bg
+
+.text--invert
+  color: $primary-color-invert
+
+
+.text-sm-15
+  +below($sm)
+    font-size: 15px

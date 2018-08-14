@@ -1,0 +1,22 @@
+@import ./vars.sass
+@import ./mixins.sass
+@import ./typo.sass
+@import ./error.sass
+@import ./grid.sass
+@import ./sizing.sass
+@import ./spacing.sass
+
+html
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+body
+  font-family: 'Open Sans', sans-serif;
+  color: $primary-color
+  line-height: 1
+  margin: 0
+  &.scroll__disable
+    overflow: hidden
+
+*
+  box-sizing: border-box
