@@ -15,7 +15,7 @@ import button from '../mixins/button.js';
  * При размере `large` меняется выравнивание текста и размеры иконки.
  */
 export default {
-  name: 'ButtonLight',
+  name: 'ButtonPlane',
   components: {
     ButtonBase,
   },
@@ -41,7 +41,7 @@ export default {
      * @return {Array} [Массив классов]
      */
     modificator() {
-      return ['button__light', `button__light--${this.size}`];
+      return ['button__plane', `button__plane--${this.size}`];
     },
   },
 };
@@ -50,39 +50,30 @@ export default {
 <style lang="sass" scoped>
   @import '@/assets/sass/vars.sass'
 
-  .button__light
-    padding: 3px 15px
-    border-radius: 5px
-    box-shadow: inset 0 0 0 1px rgba($primary-color, .15)
+  .button__plane
+    padding: 1px 7px
     text-align: center
-    font-size: 15px
+    font-size: 20px
+    font-weight: 700
     color: $primary-color
     background-color: transparent
     .button__content
     &:hover,
     &:active,
     &.active
-      background-color: $accent
-      color: $primary-color-invert
+      color: $accent
 
-  .button__light
-    &.button__light--small
-      height: 30px
+  .button__plane
+    &.button__plane--small
       font-size: 13px
 
-    &.button__light--normal
-      height: 40px
+    &.button__plane--normal
       font-size: 15px
 
-    &.button__light--large
-      width: 100%
-      height: 60px
+    &.button__plane--large
       font-size: 20px
       .button__content
         justify-content: flex-start
-      .button__light-icon
-        width: 30px
-        height: 30px
 </style>
 
 <docs>

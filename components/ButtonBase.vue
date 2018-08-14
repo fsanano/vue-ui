@@ -66,7 +66,6 @@ export default {
   .button
     position: relative
     border: 0
-    border-radius: 5px
     margin: 0
 
     font-size: 20px
