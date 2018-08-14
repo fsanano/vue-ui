@@ -17,7 +17,5 @@
 <style lang="sass">
   @import "normalize.css"
   @import "@/assets/sass/common.sass"
-  .container
-    background-color: grey
 </style>
 
