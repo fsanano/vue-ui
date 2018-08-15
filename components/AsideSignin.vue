@@ -4,12 +4,24 @@
     title="Вход"
     name="signin"
   >
-    signin
+    <form class="auth__container">
+      <div class="mb-15">
+        <InputText
+          v-model="email"
+          title="Электронная почта"
+        />
+      </div>
+      <div class="mb-15">
+        <ButtonPrimary>Войти</ButtonPrimary>
+      </div>
+    </form>
   </AsideBase>
 </template>
 
 <script>
 import AsideBase from '@/components/AsideBase.vue';
+import InputText from '@/components/InputText.vue';
+import ButtonPrimary from '@/components/ButtonPrimary.vue';
 /**
  * Компонент сайдбара для входа
  */
@@ -17,6 +29,8 @@ export default {
   name: 'AsideSignin',
   components: {
     AsideBase,
+    InputText,
+    ButtonPrimary,
   },
   mixins: [],
   props: {
@@ -27,7 +41,9 @@ export default {
     },
   },
   data() {
-    return {};
+    return {
+      email: '',
+    };
   },
   computed: {},
   watch: {},
@@ -48,7 +64,8 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-  @import '@/assets/sass/common.sass'
+  @import '@/assets/sass/vars.sass'
+  
 </style>
 
 <docs>

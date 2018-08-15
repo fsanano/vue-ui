@@ -1,7 +1,7 @@
 <template>
   <AsideBase
     :status="status"
-    title="Вход"
+    title="Профиль"
     name="profile"
   >
     profile

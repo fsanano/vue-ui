@@ -8,6 +8,7 @@
       v-html="title"
     />
     <IconBase
+      size="custom"
       name="close"
       class="aside__close"
       @click.native="close"
@@ -83,6 +84,28 @@ export default {
   .aside__container
     min-width: 389px
     background-color: $secondary-bg
+
+  .aside__title
+    padding: 0 27px
+    font-family: 'Montserrat', sans-serif
+    font-size: 35px
+    font-weight: 500
+    line-height: 2.15
+    border-bottom: 1px solid rgba($primary-color, .1)
+
+  .aside__close
+    position: absolute
+    right: 30px
+    top: 25px
+    width: 30px
+    height: 30px
+    fill: white
+    cursor: pointer
+    &:hover
+      fill: $accent
+
+  .auth__container
+    padding: 30px
 </style>
 
 <docs>

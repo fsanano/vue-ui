@@ -1,6 +1,6 @@
 <template>
   <div
-    v-if="asideStatus"
+    v-if="isVisible"
     class="aside__fancy"
   >
     <AsideSignin :status="signin"/>
@@ -30,7 +30,10 @@ export default {
       signup: state => state.common.aside.signup,
       profile: state => state.common.aside.profile,
     }),
-    asideStatus() {
+    /**
+     * Флаг состояния видимости хотя бы одного сайдбара
+     */
+    isVisible() {
       return this.signin || this.signup || this.profile;
     },
   },
