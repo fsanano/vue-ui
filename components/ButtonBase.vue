@@ -59,7 +59,7 @@ export default {
 };
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
   @import '@/assets/sass/vars.sass'
   @import '@/assets/sass/mixins.sass'
 
@@ -79,16 +79,12 @@ export default {
     &:active
       outline: none
 
-  .button--disabled,
-  .button--loaded
-    background: $disabled-bg !important
-    color: $disabled-color
-    pointer-events: none
-    &:focus
-      outline: none
-
-    &.button--primary
-      box-shadow: none !important
+    &.button--disabled,
+    &.button--loaded
+      color: #847e88
+      pointer-events: none
+      &:focus
+        outline: none
 
   .button--loaded.button__light
     background: transparent !important

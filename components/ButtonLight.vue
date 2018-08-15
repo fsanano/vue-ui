@@ -26,12 +26,12 @@ export default {
     /**
      * Размер кнопки, принимает один из трех вариантов: 'small', 'normal', 'large'
      */
-    size: {
+    typeof: {
       type: String,
       required: false,
-      default: 'normal',
+      default: '',
       validator(value) {
-        return ['small', 'normal', 'large'].indexOf(value) !== -1;
+        return ['code', 'full', 'header'].indexOf(value) !== -1;
       },
     },
   },
@@ -41,48 +41,45 @@ export default {
      * @return {Array} [Массив классов]
      */
     modificator() {
-      return ['button__light', `button__light--${this.size}`];
+      return ['button__light', `button__light--${this.typeof}`];
     },
   },
 };
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
   @import '@/assets/sass/vars.sass'
 
-  .button__light
+  .button.button__light
     padding: 3px 15px
-    border-radius: 5px
+    // border-radius: 5px
     box-shadow: inset 0 0 0 1px rgba($primary-color, .15)
     text-align: center
     font-size: 15px
-    color: $primary-color
+    color: $accent
     background-color: transparent
-    .button__content
+    transition: .3s
     &:hover,
-    &:active,
-    &.active
-      background-color: $accent
-      color: $primary-color-invert
+    &:active
+      box-shadow: inset 0 0 0 1px $accent
 
   .button__light
-    &.button__light--small
-      height: 30px
-      font-size: 13px
+    &.button__light--code
+      height: 72px
+      width: 100px
+      font-size: 14px
+      white-space: normal
+      .button__content
+        flex-flow: column nowrap
 
-    &.button__light--normal
-      height: 40px
+    &.button__light--full
+      width: 100%
+      height: 55px
       font-size: 15px
 
     &.button__light--large
-      width: 100%
-      height: 60px
+      height: 100%
       font-size: 20px
-      .button__content
-        justify-content: flex-start
-      .button__light-icon
-        width: 30px
-        height: 30px
 </style>
 
 <docs>

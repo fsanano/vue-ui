@@ -67,12 +67,12 @@ export default {
   .input__container--auto
     width: auto
     display: inline-block
-    .input__wrap
-      padding: 0 5px
-      display: flex
-      justify-content: center
-      .input__field
-        text-align: center
+    // .input__wrap
+    //   // padding: 0 5px
+    //   display: flex
+    //   justify-content: center
+    //   .input__field
+    //     text-align: center
 
   .input__wrap
     display: flex

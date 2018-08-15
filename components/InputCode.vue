@@ -162,7 +162,6 @@ export default {
     justify-content: center
 
   .input__cover
-    width: 33px
     position: relative
     z-index: 1
     .input__field--small
@@ -193,9 +192,9 @@ export default {
       background-color: $disabled-bg
 
   .input__field--small
-    width: 33px
+    width: 25px
     background-color: transparent
-    padding: 16px 4px 17px
+    // padding: 16px 4px 17px
     text-align: center
     border: 0
 </style>
