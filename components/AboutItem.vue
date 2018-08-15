@@ -23,6 +23,9 @@ export default {
     IconBase,
   },
   props: {
+    /**
+     * Текст и иконка элемента списка
+     */
     payload: {
       type: Object,
       required: false,
@@ -30,9 +33,6 @@ export default {
         return {};
       },
     },
-  },
-  data() {
-    return {};
   },
 };
 </script>
