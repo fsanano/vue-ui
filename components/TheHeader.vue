@@ -2,11 +2,14 @@
   <header class="header__container">
     <div class="container-fluid d-flex justify-content-between h-100">
       <div class="d-flex align-items-center">
-        <div class="header__logo">
+        <a
+          href="/"
+          class="header__logo"
+        >
           <img
             src="~/assets/img/logo.png"
             alt="logo">
-        </div>
+        </a>
         <ButtonLight>Как играть</ButtonLight>
         <ul class="header__nav d-flex">
           <li
@@ -24,9 +27,14 @@
       </div>
       <div class="d-flex align-items-center">
         <div class="btn__signin">
-          <ButtonPlane size="large">Вход</ButtonPlane>
+          <ButtonPlane
+            size="large"
+            @click.native="openAside('signin')"
+          >
+            Вход
+          </ButtonPlane>
         </div>
-        <ButtonPrimary>Регистарция</ButtonPrimary>
+        <ButtonPrimary @click.native="openAside('signup')">Регистарция</ButtonPrimary>
       </div>
     </div>
   </header>
@@ -46,10 +54,12 @@ export default {
     ButtonPlane,
     ButtonPrimary,
   },
-  mixins: [],
-  props: {},
   data() {
     return {
+      /**
+       * Список ссылок меню
+       * @type {Array}
+       */
       menu: [
         {
           link: '/',
@@ -69,21 +79,15 @@ export default {
       ],
     };
   },
-  computed: {},
-  watch: {},
-  beforeCreate() {},
-  created() {},
-  fetch() {},
-  beforeMount() {},
-  mounted() {},
-  beforeUpdate() {},
-  updated() {},
-  activated() {},
-  deactivated() {},
-  beforeDestroy() {},
-  destroyed() {},
-  methods: {},
-  errorCaptured() {},
+  methods: {
+    /**
+     * Метод открывающий сайдбары
+     * @param  {String} name [Имя сайдбара]
+     */
+    openAside(name) {
+      this.$store.dispatch('common/setAsideStatus', { name, status: true });
+    },
+  },
 };
 </script>
 
