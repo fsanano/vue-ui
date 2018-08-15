@@ -1,21 +1,23 @@
 <template>
-  <aside
-    v-if="status"
-    class="aside__container"
-  >
-    <div
-      class="aside__title"
-      v-html="title"
-    />
-    <IconBase
-      size="custom"
-      name="close"
-      class="aside__close"
-      @click.native="close"
-    />
-    <!-- @slot Контент сайдбара -->
-    <slot/>
-  </aside>
+  <transition name="aside">
+    <aside
+      v-if="status"
+      class="aside__container"
+    >
+      <div
+        class="aside__title"
+        v-html="title"
+      />
+      <IconBase
+        size="custom"
+        name="close"
+        class="aside__close"
+        @click.native="close"
+      />
+      <!-- @slot Контент сайдбара -->
+      <slot/>
+    </aside>
+  </transition>
 </template>
 
 <script>
@@ -106,6 +108,12 @@ export default {
 
   .auth__container
     padding: 30px
+
+  .aside-enter-active, .aside-leave-active
+    transition: transform .2s
+
+  .aside-enter, .aside-leave-to
+    transform: translate(100%, 0)
 </style>
 
 <docs>

@@ -1,12 +1,14 @@
 <template>
-  <div
-    v-if="isVisible"
-    class="aside__fancy"
-  >
-    <AsideSignin :status="signin"/>
-    <AsideSignup :status="signup"/>
-    <AsideProfile :status="profile"/>
-  </div>
+  <transition name="asidecontainer">
+    <div
+      v-if="isVisible"
+      class="aside__fancy"
+    >
+      <AsideSignin :status="signin"/>
+      <AsideSignup :status="signup"/>
+      <AsideProfile :status="profile"/>
+    </div>
+  </transition>
 </template>
 
 <script>
@@ -52,6 +54,12 @@ export default {
     width: 100%
     height: 100%
     background-color: rgba($primary-color-invert, .9)
+
+  .asidecontainer-enter-active, .asidecontainer-leave-active
+    transition: opacity .3s
+
+  .asidecontainer-enter, .asidecontainer-leave-to
+    opacity: 0
 </style>
 
 <docs>
