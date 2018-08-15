@@ -65,7 +65,6 @@ export default {
 
 <style lang="sass" scoped>
   @import '@/assets/sass/vars.sass'
-  
 </style>
 
 <docs>
