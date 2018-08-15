@@ -2,9 +2,9 @@
   <AsideBase
     :status="status"
     title="Вход"
-    name="signin"
+    name="profile"
   >
-    signin
+    profile
   </AsideBase>
 </template>
 

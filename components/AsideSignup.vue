@@ -2,7 +2,7 @@
   <AsideBase
     :status="status"
     title="Вход"
-    name="signin"
+    name="signup"
   >
     signin
   </AsideBase>
