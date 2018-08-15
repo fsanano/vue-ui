@@ -109,6 +109,10 @@ export default {
   .auth__container
     padding: 30px
 
+  .auth__container--social
+    box-shadow: inset 0 5px 0 0 rgba($primary-color-invert, .25)
+    border-top: 1px solid #000;
+
   .aside-enter-active, .aside-leave-active
     transition: transform .2s
 
