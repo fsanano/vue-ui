@@ -48,23 +48,15 @@ export default {
     },
   },
   data() {
-    return {};
+    return {
+      /**
+       * Почта пользовател
+       * @type {String}
+       */
+      email: '',
+    };
   },
-  computed: {},
-  watch: {},
-  beforeCreate() {},
-  created() {},
-  fetch() {},
-  beforeMount() {},
-  mounted() {},
-  beforeUpdate() {},
-  updated() {},
-  activated() {},
-  deactivated() {},
-  beforeDestroy() {},
-  destroyed() {},
   methods: {},
-  errorCaptured() {},
 };
 </script>
 
