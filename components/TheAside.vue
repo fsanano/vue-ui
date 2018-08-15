@@ -13,9 +13,9 @@
 
 <script>
 import { mapState } from 'vuex';
-import AsideSignin from '@/components/AsideSignin';
-import AsideSignup from '@/components/AsideSignup';
-import AsideProfile from '@/components/AsideProfile';
+import AsideSignin from '@/components/AsideSignin.vue';
+import AsideSignup from '@/components/AsideSignup.vue';
+import AsideProfile from '@/components/AsideProfile.vue';
 /**
  * Компонент конейнер для всех сайдбаров
  */

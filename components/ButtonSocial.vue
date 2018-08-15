@@ -24,8 +24,8 @@
 /**
  * Компонент кнопки для социальных сетей.
  */
-import IconBase from '@/components/IconBase';
-import ButtonBase from '@/components/ButtonBase';
+import IconBase from '@/components/IconBase.vue';
+import ButtonBase from '@/components/ButtonBase.vue';
 import button from '../mixins/button.js';
 
 export default {

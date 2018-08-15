@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="65" height="75" viewBox="0 0 65 75">
+    <defs>
+        <path id="a" d="M32.5 0l32.476 18.75v37.5L32.5 75 .024 56.25v-37.5z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="b" fill="#fff">
+            <use xlink:href="#a"/>
+        </mask>
+        <path stroke="#FFDD71" stroke-width="2" d="M32.5 1.155L1.024 19.327v36.346L32.5 73.845l31.476-18.172V19.327L32.5 1.155z"/>
+        <g mask="url(#b)">
+            <g transform="rotate(30 -72.973 64.6)">
+                <path stroke="#FFDD71" stroke-width="1.6" d="M.8.8h28v13.6H.8z"/>
+                <path fill="#FFDD71" d="M24 3.2h2.4v1H24zM3.2 3.2h2.4v1H3.2zM24 11.2h2.4v1H24zM3.2 11.2h2.4v1H3.2z"/>
+                <circle cx="14.8" cy="7.6" r="2.8" stroke="#FFDD71" stroke-width="1.6"/>
+            </g>
+        </g>
+        <g mask="url(#b)">
+            <g transform="rotate(-7 40.35 -88.1)">
+                <path stroke="#FFDD71" stroke-width="1.92" d="M.96.96h33.6v16.32H.96z"/>
+                <path fill="#FFDD71" d="M28.8 3.84h2.88v1H28.8zM3.84 3.84h2.88v1H3.84zM28.8 13.44h2.88v1H28.8zM3.84 13.44h2.88v1H3.84z"/>
+                <circle cx="17.76" cy="9.12" r="3.36" stroke="#FFDD71" stroke-width="1.92"/>
+            </g>
+        </g>
+        <g mask="url(#b)">
+            <g transform="rotate(-11 168.469 81.162)">
+                <path stroke="#FFDD71" stroke-width="1.6" d="M.8.8h28v13.6H.8z"/>
+                <path fill="#FFDD71" d="M24 3.2h2.4v1H24zM3.2 3.2h2.4v1H3.2zM24 11.2h2.4v1H24zM3.2 11.2h2.4v1H3.2z"/>
+                <circle cx="14.8" cy="7.6" r="2.8" stroke="#FFDD71" stroke-width="1.6"/>
+            </g>
+        </g>
+        <g mask="url(#b)">
+            <g transform="rotate(17 -73.522 97.448)">
+                <path stroke="#FFDD71" stroke-width="1.28" d="M.64.64h22.4v10.88H.64z"/>
+                <path fill="#FFDD71" d="M19.2 2.56h1.92v1H19.2zM2.56 2.56h1.92v1H2.56zM19.2 8.96h1.92v1H19.2zM2.56 8.96h1.92v1H2.56z"/>
+                <circle cx="11.84" cy="6.08" r="2.24" stroke="#FFDD71" stroke-width="1.28"/>
+            </g>
+        </g>
+        <g mask="url(#b)">
+            <g transform="rotate(-77 56.999 -2.558)">
+                <path stroke="#FFDD71" stroke-width="1.6" d="M.8.8h38.853v19.68H.8z"/>
+                <path fill="#FFDD71" d="M32.8 4.48h3.28V5.6H32.8zM4.373 4.48h3.28V5.6h-3.28zM32.8 15.68h3.28v1.12H32.8zM4.373 15.68h3.28v1.12h-3.28z"/>
+                <ellipse cx="20.227" cy="10.64" stroke="#FFDD71" stroke-width="1.6" rx="4.12" ry="4.24"/>
+            </g>
+        </g>
+    </g>
+</svg>

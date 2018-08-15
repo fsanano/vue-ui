@@ -1,10 +1,17 @@
 <template>
-  <h1>Index page content </h1>
+  <div class="container-fluid">
+    <AboutList/>
+  </div>
 </template>
 
 <script>
+import AboutList from '@/components/AboutList.vue';
 
-export default {};
+export default {
+  components: {
+    AboutList,
+  },
+};
 </script>
 
 <style>

@@ -3,19 +3,19 @@
     <div class="social__title">
       Через соц. сети
     </div>
-    <ButtonLightSocial name="vk">Вконтакте</ButtonLightSocial>
+    <ButtonSocial name="vk">Вконтакте</ButtonSocial>
   </div>
 </template>
 
 <script>
-import ButtonLightSocial from '@/components/ButtonLightSocial';
+import ButtonSocial from '@/components/ButtonSocial.vue';
 /**
  * Компонент входа через социальные сети
  */
 export default {
   name: 'AsideSocial',
   components: {
-    ButtonLightSocial,
+    ButtonSocial,
   },
   mixins: [],
   props: {},
