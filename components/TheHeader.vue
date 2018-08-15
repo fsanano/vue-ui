@@ -34,7 +34,7 @@
             Вход
           </ButtonPlane>
         </div>
-        <ButtonPrimary @click.native="openAside('signup')">Регистарция</ButtonPrimary>
+        <ButtonPrimary @click.native="openAside('signup')">Регистрaция</ButtonPrimary>
       </div>
     </div>
   </header>
