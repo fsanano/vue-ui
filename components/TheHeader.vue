@@ -85,6 +85,7 @@ export default {
      * @param  {String} name [Имя сайдбара]
      */
     openAside(name) {
+      this.$preventScroll.enable();
       this.$store.dispatch('common/setAsideStatus', { name, status: true });
     },
   },

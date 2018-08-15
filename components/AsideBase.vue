@@ -15,8 +15,10 @@
         class="aside__close"
         @click.native="close"
       />
-      <!-- @slot Контент сайдбара -->
-      <slot/>
+      <div class="aside__content">
+        <!-- @slot Контент сайдбара -->
+        <slot/>
+      </div>
     </aside>
   </transition>
 </template>
@@ -66,6 +68,7 @@ export default {
      */
     close() {
       const { name } = this;
+      this.$preventScroll.disable();
       this.$store.dispatch('common/setAsideStatus', { name, status: false });
     },
   },
@@ -86,7 +89,10 @@ export default {
 
   .aside__container
     min-width: 389px
+    height: 100%
     background-color: $secondary-bg
+    display: flex
+    flex-flow: column nowrap
 
   .aside__title
     padding: 0 27px
@@ -107,6 +113,10 @@ export default {
     &:hover
       fill: $accent
 
+  .aside__content
+    height: 100%
+    overflow-y: auto
+    padding-bottom: 30px
   .auth__container
     padding: 30px
     .button--primary

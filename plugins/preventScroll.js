@@ -9,13 +9,13 @@ export default ({ store }) => {
          * Disable scroll prevent
          */
         disable() {
-          document.querySelector('body').classList.remove('scroll__disable');
+          document.querySelector('body').classList.remove('scroll__disabled');
         },
         /**
          * Enable scroll prevent
          */
         enable() {
-          document.querySelector('body').classList.add('scroll__disable');
+          document.querySelector('body').classList.add('scroll__disabled');
         },
       };
     },
