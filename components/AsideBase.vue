@@ -1,6 +1,7 @@
 <template>
   <transition name="aside">
     <aside
+      v-click-outside="close"
       v-if="status"
       class="aside__container"
     >
