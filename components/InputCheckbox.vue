@@ -4,10 +4,10 @@
       :value="value"
       type="checkbox"
       class="checkbox__button"
-      @change="change"
+      @change="input"
     >
     <span
-      :class="{'active': isActive}"
+      :class="{'active': value}"
       class="checkbox__label"
     >
       <!-- @slot Текст лейбла -->
@@ -30,19 +30,9 @@ export default {
      * @model
      */
     value:{
-      type: String,
+      type: Boolean,
       required: true,
-      default: '',
-    },
-  },
-
-  computed: {
-    /**
-     * Определяем активена ли кнопка
-     * @return {Boolean} [description]
-     */
-    isActive() {
-      return this.value;
+      default: false,
     },
   },
 
@@ -52,8 +42,8 @@ export default {
      * @event input
      * @type {String}
      */
-    change() {
-      this.$emit('input', this.cValue);
+    input(event) {
+      this.$emit('input', event.target.checked);
     },
   },
 };
@@ -64,12 +54,6 @@ export default {
 
   .checkbox__container
     position: relative
-    &:hover
-      .checkbox__label
-        &:after
-          background-color: $secondary
-        &:before
-          border-color: $secondary
 
   .checkbox__button
     display: none
@@ -77,7 +61,7 @@ export default {
   .checkbox__label
     position: relative
     padding-left: 26px
-    font-size: 20px
+    font-size: 14px
     cursor: pointer
     &:after,
     &:before
@@ -87,28 +71,31 @@ export default {
       top: 0
       bottom: 0
       margin: auto
-      border-radius: 100%
       box-sizing: border-box
 
     &:after
       display: none
       width: 8px
-      height: 8px
+      height: 4px
       margin-left: 5px
-      background-color: $primary-color
+      border-left: 2px solid black
+      border-bottom: 2px solid black
+      transform: rotate(-45deg)
+      // background-color: $primary-color
 
     &:before
       display: block
       width: 18px
       height: 18px
-      border: 2px solid $primary-color
+      border: 1px solid #564f5b
+      background-color: $primary-color-invert
 
   .checkbox__label.active
     &:after
       display: block
-      background-color: $secondary
     &:before
-      border-color: $secondary
+      background-color: $accent
+      border: 1px solid $primary-color-invert
 </style>
 
 <docs>

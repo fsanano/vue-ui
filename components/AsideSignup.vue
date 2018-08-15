@@ -11,6 +11,9 @@
           title="Электронная почта"
         />
       </div>
+      <div class="mb-15">
+        <InputCheckbox v-model="userAgreement"> Я принимаю условия соглашения</InputCheckbox>
+      </div>
       <ButtonPrimary>Регистрация</ButtonPrimary>
     </form>
 
@@ -24,6 +27,7 @@
 <script>
 import AsideBase from '@/components/AsideBase.vue';
 import InputText from '@/components/InputText.vue';
+import InputCheckbox from '@/components/InputCheckbox.vue';
 import ButtonPrimary from '@/components/ButtonPrimary.vue';
 import AsideSocial from '@/components/AsideSocial.vue';
 import AsideStock from '@/components/AsideStock.vue';
@@ -35,6 +39,7 @@ export default {
   components: {
     AsideBase,
     InputText,
+    InputCheckbox,
     ButtonPrimary,
     AsideSocial,
     AsideStock,
@@ -54,6 +59,7 @@ export default {
        * @type {String}
        */
       email: '',
+      userAgreement: false,
     };
   },
   methods: {},
