@@ -51,7 +51,7 @@ export default {
 
   .about__text
     padding-left: 18px
-    padding-right: 15px
+    padding-right: 45px
     font-size: 14px
 </style>
 

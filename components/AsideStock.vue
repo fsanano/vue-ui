@@ -1,12 +1,20 @@
 <template>
   <div class="stock__container">
-    <div
-      class="stock__title"
-      v-html="title"
-    />
-    <div class="stock__content">
-      <!-- @slot Текст акции -->
-      <slot/>
+    <div class="d-flex">
+      <div>
+        <div
+          class="stock__title"
+          v-html="title"
+        />
+        <div class="stock__content">
+          <!-- @slot Текст акции -->
+          <slot/>
+        </div>
+      </div>
+      <img
+        src="/promo-coin.png"
+        alt="promo_coin"
+      >
     </div>
   </div>
 </template>
