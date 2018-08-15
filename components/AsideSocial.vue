@@ -48,7 +48,7 @@ export default {
     border-top: 1px solid #000;
 
   .social__title
-    font-family: 'Montserrat', sans-serif
+    font-family: 'Montserrat Alternates', sans-serif;
     font-size: 26px
     font-weight: 700
     margin-bottom: 10px

@@ -34,7 +34,7 @@ export default {
 
   .stock__title
     margin-bottom: 5px
-    font-family: 'Montserrat', sans-serif
+    font-family: 'Montserrat Alternates', sans-serif;
     font-size: 26px
     font-weight: 700
     color: $accent

@@ -86,7 +86,7 @@ export default {
 
   .aside__title
     padding: 0 27px
-    font-family: 'Montserrat', sans-serif
+    font-family: 'Montserrat Alternates', sans-serif;
     font-size: 35px
     font-weight: 500
     line-height: 2.15
