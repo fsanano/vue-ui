@@ -39,7 +39,6 @@ export default {
     padding: 19px 32px 24px
     font-weight: bold
     background-image: linear-gradient(to bottom, $accent-gradient-start, $accent-gradient-end)
-    box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.2)
     color: $primary-color-invert
     +below(480px)
       width: 100%
@@ -53,8 +52,6 @@ export default {
       +above($lg)
         background-image: linear-gradient(to bottom, $secondary-gradient-start, $secondary-gradient-end)
     &:active
-      +above($lg)
-        box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.2)
       +below($lg)
         background-color: $secondary
 </style>

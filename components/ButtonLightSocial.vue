@@ -66,7 +66,6 @@ export default {
 <style lang="sass">
   @import '@/assets/sass/vars.sass'
   @import '@/assets/sass/mixins.sass'
-  @import '@/assets/sass/buttonLight.sass'
 
   .button__light--social
     padding: 18px 15px 15px
