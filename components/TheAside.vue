@@ -49,6 +49,7 @@ export default {
     position: fixed
     top: 0
     left: 0
+    z-index: 3
     display: flex
     justify-content: flex-end
     width: 100%
