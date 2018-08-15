@@ -12,7 +12,15 @@
         />
       </div>
       <div class="mb-15">
-        <InputCheckbox v-model="userAgreement"> Я принимаю условия соглашения</InputCheckbox>
+        <InputCheckbox v-model="userAgreement">
+          Я принимаю
+          <a
+            href=""
+            class="aside__link"
+          >
+            условия соглашения
+          </a>
+        </InputCheckbox>
       </div>
       <ButtonPrimary>Регистрация</ButtonPrimary>
     </form>
@@ -68,6 +76,9 @@ export default {
 
 <style lang="sass" scoped>
   @import '@/assets/sass/common.sass'
+  .aside__link
+    color: $accent
+    text-decoration: none
 </style>
 
 <docs>
