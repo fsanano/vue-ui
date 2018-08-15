@@ -77,16 +77,6 @@ export default {
 
 <style lang="sass">
   @import '@/assets/sass/vars.sass'
-  .aside__fancy
-    position: fixed
-    top: 0
-    left: 0
-    display: flex
-    justify-content: flex-end
-    width: 100%
-    height: 100%
-    background-color: rgba($primary-color-invert, .9)
-
   .aside__container
     min-width: 389px
     height: 100%
@@ -117,11 +107,12 @@ export default {
     height: 100%
     overflow-y: auto
     padding-bottom: 30px
+
   .auth__container
     padding: 30px
     .button--primary
       width: 100%
-
+  // Анимация появления и скрытия сайдбара
   .aside-enter-active, .aside-leave-active
     transition: transform .2s
 

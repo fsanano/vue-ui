@@ -1,5 +1,5 @@
 <template>
-  <transition name="asidecontainer">
+  <transition name="fancy">
     <div
       v-if="isVisible"
       class="aside__fancy"
@@ -55,10 +55,10 @@ export default {
     height: 100%
     background-color: rgba($primary-color-invert, .9)
 
-  .asidecontainer-enter-active, .asidecontainer-leave-active
+  .fancy-enter-active, .fancy-leave-active
     transition: opacity .3s
 
-  .asidecontainer-enter, .asidecontainer-leave-to
+  .fancy-enter, .fancy-leave-to
     opacity: 0
 </style>
 
