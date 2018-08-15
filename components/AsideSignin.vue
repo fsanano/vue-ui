@@ -11,10 +11,10 @@
           title="Электронная почта"
         />
       </div>
-      <div class="mb-15">
-        <ButtonPrimary>Войти</ButtonPrimary>
-      </div>
+      <ButtonPrimary>Войти</ButtonPrimary>
     </form>
+
+    <AsideSocial/>
   </AsideBase>
 </template>
 
@@ -22,6 +22,7 @@
 import AsideBase from '@/components/AsideBase.vue';
 import InputText from '@/components/InputText.vue';
 import ButtonPrimary from '@/components/ButtonPrimary.vue';
+import AsideSocial from '@/components/AsideSocial.vue';
 /**
  * Компонент сайдбара для входа
  */
@@ -31,6 +32,7 @@ export default {
     AsideBase,
     InputText,
     ButtonPrimary,
+    AsideSocial,
   },
   mixins: [],
   props: {

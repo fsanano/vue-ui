@@ -1,34 +1,35 @@
 <template>
   <ButtonBase :payload="buttonPayload">
-    <!-- Иконка социальной сети -->
-    <IconBase
-      :name="name"
-      class="button__light-social-icon"
-    />
     <!-- Текст десктопной версии -->
-    <span class="button__light-text">
+    <span class="button__social-text">
       <!-- @slot Текст отображаемый на десктопе -->
       <slot/>
     </span>
     <!-- Текст мобильной версии -->
     <!-- Текста переключаются с помощью css на разрешении 768px -->
     <span
-      class="button__light-text--mobile"
+      class="button__social-text--mobile"
       v-html="name"
+    />
+    <!-- Иконка социальной сети -->
+    <IconBase
+      :name="name"
+      size="middle"
+      class="button__social-icon"
     />
   </ButtonBase>
 </template>
 
 <script>
 /**
- * Компонент light кнопки для социальных сетей.
+ * Компонент кнопки для социальных сетей.
  */
 import IconBase from '@/components/IconBase';
 import ButtonBase from '@/components/ButtonBase';
 import button from '../mixins/button.js';
 
 export default {
-  name: 'ButtonLightSocial',
+  name: 'ButtonSocial',
   components: {
     ButtonBase,
     IconBase,
@@ -57,7 +58,7 @@ export default {
      * @return {Array} [Массив классов]
      */
     modificator() {
-      return ['button__light', 'button__light--social'];
+      return ['button__social', `button__social--${this.name}`];
     },
   },
 };
@@ -67,29 +68,27 @@ export default {
   @import '@/assets/sass/vars.sass'
   @import '@/assets/sass/mixins.sass'
 
-  .button__light--social
-    padding: 18px 15px 15px
-    height: 100px
+  .button__social
+    padding: 0 16px 0 18px
     width: 100%
+    height: 55px
     &>.button__content
       display: flex
-      flex-flow: column nowrap
       align-items: center
-      justify-content: center
+      justify-content: space-between
     +below($md)
       height: 90px
 
-  .button__light-social-icon
-    width: 46px
-    height: 46px
+    &.button__social--vk
+      background-color: blue
 
-  .button__light-text
+  .button__social-text
     font-size: 15px
     font-weight: bold
     +below($md)
       display: none
 
-  .button__light-text--mobile
+  .button__social-text--mobile
     display: none
     font-size: 13px
     font-weight: bold
@@ -102,7 +101,7 @@ export default {
 ```
 <div class="row">
   <div class="col-3">
-    <ButtonLightSocial name="vk">Вконтакте</ButtonLightSocial>
+    <ButtonSocial name="vk">Вконтакте</ButtonSocial>
   </div>
 </div>
 ```

@@ -36,7 +36,7 @@ export default {
   @import '@/assets/sass/vars.sass'
 
   .button--primary
-    padding: 19px 32px 24px
+    padding: 17px 32px 18px
     font-weight: bold
     background-image: linear-gradient(to bottom, $accent-gradient-start, $accent-gradient-end)
     color: $primary-color-invert
