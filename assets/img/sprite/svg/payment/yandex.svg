@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>980ACF64-45B3-4672-B71B-7FF5C7FBEA2E</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <polygon id="path-1" points="0.00650943396 0.0947311828 23.0049988 0.0947311828 23.0049988 30 0.00650943396 30"></polygon>
+    </defs>
+    <g id="Libray" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons/payment/yandex">
+            <g id="yandex_dengi_product_icon_cmyk.eps" transform="translate(3.000000, -1.000000)">
+                <g id="Group-3">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <path d="M4.71459961,9.95874023 C7.61954301,7.80960045 17.010376,1.09473118 17.010376,1.09473118 L17.010376,12.0002289 L22.9984894,12.0002289 L22.9984894,30 L3.21201415,30 C1.99561792,30 1,29.0132258 1,27.8075269 L1.00032547,14.9290323 C1.00032547,13.2497849 1.20579772,12.5547617 4.71459961,9.95874023 Z M12.6700672,10.258804 C12.1517754,9.71566945 11.2078097,10.0552436 10.5615117,11.016891 C9.91539796,11.9784232 9.81153686,13.1980595 10.3299208,13.741079 C10.8482126,14.2842136 11.7924547,13.9450997 12.4383841,12.9835674 C13.0847743,12.02192 13.1883589,10.8019386 12.6700672,10.258804 Z" id="Combined-Shape" fill="#FACA22" mask="url(#mask-2)"></path>
+                </g>
+                <polygon id="Fill-4" fill="#C9A521" points="17.0093384 19.1532787 1.7286377 29.2756348 21 22.6579685 21 12 17.0093384 12"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

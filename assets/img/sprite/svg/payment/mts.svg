@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>079173C8-6C20-45F1-B244-5E7DE83BDA5D</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Libray" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons/payment/mts">
+            <rect id="Rectangle-9" fill="#E30613" x="0" y="0" width="30" height="30" rx="5"></rect>
+            <path d="M15.5,25.0606689 C19.575327,25.0606689 23,21.9989604 23,17.4395161 C23,12.8800718 19.575327,4.85887097 15.5,4.85887097 C11.424673,4.85887097 8,12.8461678 8,17.4395161 C8,22.0328645 11.424673,25.0606689 15.5,25.0606689 Z" id="Oval" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

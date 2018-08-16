@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>5BFF6DC0-5F80-419B-84A9-39E55E08D971</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Libray" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons/payment/tele2" fill="#FFFFFF">
+            <g id="Tele2_logo" transform="translate(4.000000, 0.000000)" fill-rule="nonzero">
+                <path d="M11,0.121055612 L11,6.58549542 C12.2664854,6.51813348 13.5234375,6.96821277 13.9806925,7.87436935 C14.702712,9.30304238 13.9578056,11.4466287 12.2005782,13.4326526 C9.48836729,16.4973904 1.1511779,22.8712679 0.992300966,23.0064392 L11.3458252,23.0288086 C17.6719885,17.1106465 21.2276294,12.9338974 21.6352561,8.45040626 C21.8494287,6.0784353 20.9503373,3.79297369 19.1678139,2.17882462 C17.2176143,0.414495318 14.1275468,-0.309184208 11,0.121055612 Z M1.27271476,12.8208585 L7.74511719,12.0111084 C7.44879285,8.04921099 8.74659279,7.36638646 10.0265694,6.84963729 L10.0234375,0.266160624 C3.92276982,1.51028038 0.927003029,5.80806475 1.27271476,12.8208585 Z" id="Shape"></path>
+            </g>
+            <rect id="Rectangle-12" x="5" y="24" width="21" height="6"></rect>
+        </g>
+    </g>
+</svg>

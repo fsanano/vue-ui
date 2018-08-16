@@ -77,6 +77,10 @@ export default {
     };
   },
   computed: {
+    /**
+     * В зависимости от результата игры выводиться иконка
+     * @return {String} [Название иконки]
+     */
     icon() {
       if (this.payload.win) {
         return 'cup';
@@ -86,6 +90,10 @@ export default {
     },
   },
   methods: {
+    /**
+     * Метод переключения состоя
+     * @return {[type]} [description]
+     */
     toggleDropdown() {
       this.showDropdown = !this.showDropdown;
     },

@@ -7,6 +7,8 @@
       <AsideSignin :status="signin"/>
       <AsideSignup :status="signup"/>
       <AsideProfile :status="profile"/>
+      <AsideRefill :status="refill"/>
+      <AsideWithdrawal :status="withdrawal"/>
     </div>
   </transition>
 </template>
@@ -16,6 +18,8 @@ import { mapState } from 'vuex';
 import AsideSignin from '@/components/AsideSignin.vue';
 import AsideSignup from '@/components/AsideSignup.vue';
 import AsideProfile from '@/components/AsideProfile.vue';
+import AsideRefill from '@/components/AsideRefill.vue';
+import AsideWithdrawal from '@/components/AsideWithdrawal.vue';
 /**
  * Компонент конейнер для всех сайдбаров
  */
@@ -25,18 +29,23 @@ export default {
     AsideSignin,
     AsideSignup,
     AsideProfile,
+    AsideRefill,
+    AsideWithdrawal,
   },
   computed: {
     ...mapState({
+      aside: state => state.aside,
       signin: state => state.aside.signin,
       signup: state => state.aside.signup,
       profile: state => state.aside.profile,
+      refill: state => state.aside.refill,
+      withdrawal: state => state.aside.withdrawal,
     }),
     /**
      * Флаг состояния видимости хотя бы одного сайдбара
      */
     isVisible() {
-      return this.signin || this.signup || this.profile;
+      return Object.values(this.aside).indexOf(true) !== -1;
     },
   },
 };

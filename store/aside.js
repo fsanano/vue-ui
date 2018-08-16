@@ -11,6 +11,8 @@ const state = () => ({
   signin: false,
   signup: false,
   profile: false,
+  refill: false,
+  withdrawal: false,
   /**
    * Данные для вывода в сайдбаре пользователя
    * Могут быть данные любого пользователя.

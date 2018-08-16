@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>4B003153-0A7D-46A3-84EB-6F47C255B3CB</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <circle id="path-1" cx="15" cy="15" r="15"></circle>
+        <linearGradient x1="100%" y1="42.3014313%" x2="0%" y2="42.3014323%" id="linearGradient-3">
+            <stop stop-color="#FFE001" offset="0%"></stop>
+            <stop stop-color="#F9A51A" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Libray" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons/payment/beeline">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#000000" xlink:href="#path-1"></use>
+            <g id="Mask" mask="url(#mask-2)" fill="url(#linearGradient-3)">
+                <g transform="translate(0.000000, 6.000000)" id="Combined-Shape">
+                    <path d="M0,0 L30,0 L30,6 L0,6 L0,0 Z M0,12 L30,12 L30,18 L0,18 L0,12 Z"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

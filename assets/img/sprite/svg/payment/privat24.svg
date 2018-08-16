@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>B325DDF4-517C-47B4-9412-2731C00483A0</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Libray" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons/payment/Privat24">
+            <g id="payment-icons/private24">
+                <polygon id="Fill-17" fill="#FFFFFF" points="0 30 11 30 11 19 0 19"></polygon>
+                <path d="M0,0 L0,14.597175 L3.10214046,14.597175 C11.2629147,14.597175 15.4034614,18.7379022 15.4034614,26.8977243 L15.4034614,30 L30,30 L30,0 L0,0 Z M24,23.9997083 C22.8587781,23.9997083 22.6594321,23.9997083 21.5529954,23.9997083 C20.4973985,15.0983242 14.8996581,9.50702948 6,8.45138662 C6,7.33954983 6,7.14287112 6,6.00159943 C10.077895,6.00159943 19.922105,6.00159943 24,6.00159943 C24,10.0783343 24,19.9216354 24,23.9997083 Z" id="Fill-18" fill="#5BB245"></path>
+            </g>
+        </g>
+    </g>
+</svg>

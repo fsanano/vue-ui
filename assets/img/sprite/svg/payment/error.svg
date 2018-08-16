@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="226px" height="226px" viewBox="0 0 226 226" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>1DCC512B-8656-42EF-802C-ACCB5E4CEA5E</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="180" height="180" rx="90"></rect>
+        <filter x="-23.3%" y="-16.7%" width="146.7%" height="146.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="4" operator="erode" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="12" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="16" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.596665534 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-15.3%" y="-8.6%" width="130.6%" height="130.6%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="7" dy="-5" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.155032835 0" type="matrix" in="shadowInnerInner1" result="shadowMatrixInner1"></feColorMatrix>
+            <feOffset dx="-7" dy="5" in="SourceAlpha" result="shadowOffsetInner2"></feOffset>
+            <feComposite in="shadowOffsetInner2" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner2"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 0.46040483   0 0 0 0 0.46040483  0 0 0 1 0" type="matrix" in="shadowInnerInner2" result="shadowMatrixInner2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixInner1"></feMergeNode>
+                <feMergeNode in="shadowMatrixInner2"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="desktop-payment-false" transform="translate(-527.000000, -239.000000)">
+            <g id="icons/boolean/false" transform="translate(550.000000, 250.000000)">
+                <g>
+                    <g id="Rectangle">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#FF4A43" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                    </g>
+                    <path d="M90.4589979,83.1970297 L120.280105,51.569875 C122.174518,49.5607309 125.338977,49.4677232 127.348121,51.3621364 C129.357265,53.2565497 129.450273,56.421008 127.555859,58.4301521 L97.3311377,90.4853651 L127.555859,122.540578 C129.450273,124.549722 129.357265,127.714181 127.348121,129.608594 C125.338977,131.503007 122.174518,131.409999 120.280105,129.400855 L90.4589979,97.7737004 L60.6378906,129.400855 C58.7434774,131.409999 55.579019,131.503007 53.569875,129.608594 C51.5607309,127.714181 51.4677232,124.549722 53.3621364,122.540578 L83.586858,90.4853651 L53.3621364,58.4301521 C51.4677232,56.421008 51.5607309,53.2565497 53.569875,51.3621364 C55.579019,49.4677232 58.7434774,49.5607309 60.6378906,51.569875 L90.4589979,83.1970297 Z" id="Combined-Shape" fill="#2A0053" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
