@@ -11,13 +11,24 @@
       />
       <div class="game__data d-flex align-items-center">
         <div class="data__title">Банк</div>
-        <div class="data__value">20₽</div>
+        <div
+          class="data__value"
+          v-html="payload.bank"
+        />
       </div>
       <div class="game__data d-flex align-items-center">
         <div class="data__title">Шанс</div>
-        <div class="data__value">12%</div>
+        <div
+          class="data__value"
+          v-html="payload.chanse"
+        />
       </div>
-      <ButtonLight typeof="history">Подробнее</ButtonLight>
+      <ButtonLight
+        typeof="history"
+        @click.native="toggleDropdown"
+      >
+        Подробнее
+      </ButtonLight>
     </div>
     <div
       v-if="showDropdown"
@@ -70,20 +81,11 @@ export default {
       }
     },
   },
-  watch: {},
-  beforeCreate() {},
-  created() {},
-  fetch() {},
-  beforeMount() {},
-  mounted() {},
-  beforeUpdate() {},
-  updated() {},
-  activated() {},
-  deactivated() {},
-  beforeDestroy() {},
-  destroyed() {},
-  methods: {},
-  errorCaptured() {},
+  methods: {
+    toggleDropdown() {
+      this.showDropdown = !this.showDropdown;
+    },
+  },
 };
 </script>
 

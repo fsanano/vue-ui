@@ -82,7 +82,7 @@ export default {
         {
           bank: 20,
           win: false,
-          chanse: 50,
+          chanse: 54,
           rate: 10,
           members:[
             {
@@ -96,7 +96,7 @@ export default {
         {
           bank: 120,
           win: true,
-          chanse: 50,
+          chanse: 12,
           rate: 10,
           members:[
             {
@@ -110,7 +110,7 @@ export default {
         {
           bank: 200,
           win: false,
-          chanse: 50,
+          chanse: 59,
           rate: 10,
           members:[
             {
