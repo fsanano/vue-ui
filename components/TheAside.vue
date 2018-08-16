@@ -28,9 +28,9 @@ export default {
   },
   computed: {
     ...mapState({
-      signin: state => state.common.aside.signin,
-      signup: state => state.common.aside.signup,
-      profile: state => state.common.aside.profile,
+      signin: state => state.aside.signin,
+      signup: state => state.aside.signup,
+      profile: state => state.aside.profile,
     }),
     /**
      * Флаг состояния видимости хотя бы одного сайдбара
