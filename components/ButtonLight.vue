@@ -92,12 +92,13 @@ export default {
       font-size: 12px
       background-color: $primary-color
       color: $secondary-color
+      box-shadow: inset 0 -2px 0 0 #00000018
       &:hover
         background-color: $accent
         color: $secondary-color
       &:active,
       &.active
-        box-shadow: inset 0 2px 0 1px #00000059;
+        box-shadow: inset 0 2px 0 1px #00000059
         color: $primary-color
         background-color: $secondary
       &.button--disabled

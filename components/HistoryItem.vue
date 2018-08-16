@@ -110,9 +110,8 @@ export default {
     padding: 0 30px
     height: 75px
     border-bottom: 1px solid rgba($primary-color, .15)
-    border-left: 4px solid transparent
     &.win
-      border-left: 4px solid $accent
+      box-shadow: inset 4px 0 0 $accent
 
   .game__icon
     width: 35px
