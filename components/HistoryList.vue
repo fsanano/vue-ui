@@ -22,6 +22,10 @@ export default {
     HistoryItem,
   },
   props: {
+    /**
+     * Список истории игр
+     * @type {Object}
+     */
     list: {
       type: Array,
       required: true,

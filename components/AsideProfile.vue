@@ -81,6 +81,7 @@ export default {
       history: [
         {
           bank: 20,
+          win: false,
           chanse: 50,
           rate: 10,
           members:[
@@ -94,6 +95,7 @@ export default {
         },
         {
           bank: 120,
+          win: true,
           chanse: 50,
           rate: 10,
           members:[
@@ -107,6 +109,7 @@ export default {
         },
         {
           bank: 200,
+          win: false,
           chanse: 50,
           rate: 10,
           members:[

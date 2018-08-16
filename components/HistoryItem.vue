@@ -1,9 +1,12 @@
 <template>
   <div class="history__item">
-    <div class="history__game d-flex align-items-center justify-content-between">
+    <div
+      :class="{'win': payload.win}"
+      class="history__game d-flex align-items-center justify-content-between"
+    >
       <IconBase
+        :name="icon"
         size="custom"
-        name="sad"
         class="game__icon"
       />
       <div class="game__data d-flex align-items-center">
@@ -58,7 +61,15 @@ export default {
       showDropdown: false,
     };
   },
-  computed: {},
+  computed: {
+    icon() {
+      if (this.payload.win) {
+        return 'cup';
+      } else {
+        return 'sad';
+      }
+    },
+  },
   watch: {},
   beforeCreate() {},
   created() {},
@@ -78,10 +89,16 @@ export default {
 
 <style lang="sass">
   @import '@/assets/sass/vars.sass'
+  .history__item
+    position: relative
+
   .history__game
     padding: 0 30px
     height: 75px
     border-bottom: 1px solid rgba($primary-color, .15)
+    border-left: 4px solid transparent
+    &.win
+      border-left: 4px solid $accent
 
   .game__icon
     width: 35px
