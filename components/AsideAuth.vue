@@ -5,7 +5,7 @@
     :status="status"
   >
     <form
-      v-if="isVisisbleForm"
+      v-if="isCodeFormVisible"
       class="auth__container"
       @submit.prevent="confirmCode"
     >
@@ -39,7 +39,7 @@
     </form>
     <template v-else>
       <!-- @slot -->
-      <slot :signIn="signIn"/>
+      <slot :auth="auth"/>
     </template>
   </AsideBase>
 </template>
@@ -100,20 +100,33 @@ export default {
        */
       countdown: 60,
       /**
-       * Флаг состояния формы
+       * Флаг состояния формы ввода кода
        * @type {Boolean}
        */
-      isVisisbleForm: false,
+      isCodeFormVisible: false,
     };
   },
   methods: {
-    signIn() {
-      this.isVisisbleForm = true;
+    /**
+     * Отправка email
+     * @return {[type]} [description]
+     */
+    auth() {
+      this.isCodeFormVisible = true;
       this.startCountdown();
     },
+    /**
+     * Подтверждение кода
+     * @return {[type]} [description]
+     */
     confirmCode() {
-      this.isVisisbleForm = false;
+      this.isCodeFormVisible = false;
     },
+    /**
+     * Начало отсчета времени,   
+     * после которого можно заново запросить код подтверждения
+     * @return {[type]} [description]
+     */
     startCountdown() {
       this.countdown = 60;
       const interval = setInterval(() => {

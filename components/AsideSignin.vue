@@ -1,13 +1,13 @@
 <template>
   <AsideAuth
     :status="status"
-    title="Вход"
     name="signin"
+    title="Вход"
   >
     <form
       slot-scope="scope"
       class="auth__container"
-      @submit.prevent="scope.signIn"
+      @submit.prevent="send(scope)"
     >
       <div class="mb-15">
         <InputText
@@ -41,6 +41,9 @@ export default {
   },
   mixins: [],
   props: {
+    /**
+     * Флаг видимости сайдбара для входа
+     */
     status: {
       type: Boolean,
       require: true,
@@ -50,11 +53,17 @@ export default {
   data() {
     return {
       /**
-       * Почта пользовател
+       * Почта пользователя
        * @type {String}
        */
       email: '',
     };
+  },
+
+  methods: {
+    send(scope) {
+      scope.auth();
+    },
   },
 
 };
