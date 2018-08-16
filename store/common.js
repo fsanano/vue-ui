@@ -1,6 +1,4 @@
 /* eslint-disable */
-import Vue from 'vue';
-
 const SET_USER_DEVICE = 'COMMON/SET_USER_DEVICE';
 
 const state = () => ({
