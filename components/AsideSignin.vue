@@ -4,21 +4,22 @@
     name="signin"
     title="Вход"
   >
-    <form
-      slot-scope="scope"
-      class="auth__container"
-      @submit.prevent="send(scope)"
-    >
-      <div class="mb-15">
-        <InputText
-          v-model="email"
-          title="Электронная почта"
-        />
-      </div>
-      <ButtonPrimary>Войти</ButtonPrimary>
-    </form>
+    <template slot-scope="scope">
+      <form
+        class="auth__container"
+        @submit.prevent="send(scope)"
+      >
+        <div class="mb-15">
+          <InputText
+            v-model="email"
+            title="Электронная почта"
+          />
+        </div>
+        <ButtonPrimary>Войти</ButtonPrimary>
+      </form>
 
-    <AsideSocial/>
+      <AsideSocial/>
+    </template>
 
   </AsideAuth>
 </template>

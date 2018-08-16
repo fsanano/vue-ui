@@ -123,7 +123,7 @@ export default {
       this.isCodeFormVisible = false;
     },
     /**
-     * Начало отсчета времени,   
+     * Начало отсчета времени,
      * после которого можно заново запросить код подтверждения
      * @return {[type]} [description]
      */

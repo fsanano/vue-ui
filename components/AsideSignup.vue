@@ -1,39 +1,46 @@
 <template>
-  <AsideBase
+  <AsideAuth
     :status="status"
-    title="Регистарция"
     name="signup"
+    title="Регистарция"
   >
-    <form class="auth__container">
-      <div class="mb-15">
-        <InputText
-          v-model="email"
-          title="Электронная почта"
-        />
-      </div>
-      <div class="mb-15">
-        <InputCheckbox v-model="userAgreement">
-          Я принимаю
-          <a
-            href=""
-            class="aside__link"
-          >
-            условия соглашения
-          </a>
-        </InputCheckbox>
-      </div>
-      <ButtonPrimary>Регистрация</ButtonPrimary>
-    </form>
+    <template slot-scope="scope">
+      <form
+        class="auth__container"
+        @submit.prevent="send(scope)"
+      >
+        <div class="mb-15">
+          <InputText
+            v-model="email"
+            title="Электронная почта"
+          />
+        </div>
+        <div class="mb-15">
+          <InputCheckbox v-model="userAgreement">
+            Я принимаю
+            <a
+              href=""
+              class="aside__link"
+            >
+              условия соглашения
+            </a>
+          </InputCheckbox>
+        </div>
+        <ButtonPrimary>Регистрация</ButtonPrimary>
+      </form>
 
-    <AsideSocial/>
-    <AsideStock>
-      Зарегистрируйся и получи одну игру бесплатно!
-    </AsideStock>
-  </AsideBase>
+      <AsideSocial/>
+
+      <AsideStock>
+        Зарегистрируйся и получи одну игру бесплатно!
+      </AsideStock>
+    </template>
+
+  </AsideAuth>
 </template>
 
 <script>
-import AsideBase from '@/components/AsideBase.vue';
+import AsideAuth from '@/components/AsideAuth.vue';
 import InputText from '@/components/InputText.vue';
 import InputCheckbox from '@/components/InputCheckbox.vue';
 import ButtonPrimary from '@/components/ButtonPrimary.vue';
@@ -45,7 +52,7 @@ import AsideStock from '@/components/AsideStock.vue';
 export default {
   name: 'AsideSignup',
   components: {
-    AsideBase,
+    AsideAuth,
     InputText,
     InputCheckbox,
     ButtonPrimary,
@@ -67,10 +74,18 @@ export default {
        * @type {String}
        */
       email: '',
+      /**
+       * Флаг состояния подтверждения условия соглашения
+       * @type {Boolean}
+       */
       userAgreement: false,
     };
   },
-  methods: {},
+  methods: {
+    send(scope) {
+      scope.auth();
+    },
+  },
 };
 </script>
 
