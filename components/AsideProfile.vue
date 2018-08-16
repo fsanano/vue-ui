@@ -63,7 +63,6 @@ export default {
     ButtonLight,
     HistoryList,
   },
-  mixins: [],
   props: {
     status: {
       type: Boolean,
@@ -132,20 +131,7 @@ export default {
       return `${this.profile.wins} %`;
     },
   },
-  watch: {},
-  beforeCreate() {},
-  created() {},
-  fetch() {},
-  beforeMount() {},
-  mounted() {},
-  beforeUpdate() {},
-  updated() {},
-  activated() {},
-  deactivated() {},
-  beforeDestroy() {},
-  destroyed() {},
   methods: {},
-  errorCaptured() {},
 };
 </script>
 
