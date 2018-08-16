@@ -26,7 +26,7 @@
     <ButtonPrimary
       class="mb-15"
       type="full"
-      @click.native="openProfile"
+      @click.native="changeStep"
     >
       Продолжить
     </ButtonPrimary>
@@ -134,10 +134,8 @@ export default {
       }, 1000);
     },
 
-    openProfile() {
-      this.$store.dispatch('aside/setAsideStatus', { name: 'signin', status: false });
-      this.$store.dispatch('aside/setAsideStatus', { name: 'signup', status: false });
-      this.$store.dispatch('aside/setAsideStatus', { name: 'profile', status: true });
+    changeStep() {
+      this.$emit('step');
     },
   },
 };

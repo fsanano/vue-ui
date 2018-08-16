@@ -15,9 +15,7 @@
         >
           <FormSignup @step="changeStep('code')"/>
           <FormSocial/>
-          <TheStock>
-            Зарегистрируйся и получи одну игру бесплатно!
-          </TheStock>
+          <TheStock>Зарегистрируйся и получи одну игру бесплатно!</TheStock>
         </div>
 
         <FormCode
@@ -25,6 +23,7 @@
           key="code"
           @step="changeStep('credentials')"
         />
+
       </transition>
     </template>
 
@@ -36,6 +35,7 @@ import AsideBase from '@/components/AsideBase.vue';
 import FormSignup from '@/components/FormSignup.vue';
 import FormSocial from '@/components/FormSocial.vue';
 import TheStock from '@/components/TheStock.vue';
+import FormCode from '@/components/FormCode.vue';
 /**
  * Компонент сайдбара для регистрации
  */
@@ -46,6 +46,7 @@ export default {
     FormSignup,
     FormSocial,
     TheStock,
+    FormCode,
   },
   mixins: [],
   props: {
