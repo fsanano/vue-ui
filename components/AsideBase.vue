@@ -114,6 +114,7 @@ export default {
     padding: 30px
     .button--primary
       width: 100%
+
   // Анимация появления и скрытия сайдбара
   .aside-enter-active, .aside-leave-active
     transition: transform .2s

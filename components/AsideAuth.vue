@@ -4,49 +4,59 @@
     :title="title"
     :status="status"
   >
-    <form
-      v-if="isCodeFormVisible"
-      class="auth__container"
-      @submit.prevent="confirmCode"
+    <transition
+      name="auth"
+      mode="out-in"
     >
-      <div class="d-flex align-items-center mb-15">
-        <InputCode
-          v-model="code"
-          title="Код"
-          class="mr-10"
-        />
-        <ButtonLight
-          :is-disabled="countdown > 0"
-          type="border"
-          size="high"
-          @click.prevent.native="startCountdown"
-        >
-          <span
-            v-if="countdown"
-            class="btn__countdown"
-            v-html="countdown"
+      <form
+        v-if="isCodeFormVisible"
+        key="confirm"
+        class="auth__container"
+        @submit.prevent="confirmCode"
+      >
+        <div class="d-flex align-items-center mb-15">
+          <InputCode
+            v-model="code"
+            title="Код"
+            class="mr-10"
           />
-          Отправить еще раз
+          <ButtonLight
+            :is-disabled="countdown > 0"
+            type="border"
+            size="high"
+            @click.prevent.native="startCountdown"
+          >
+            <span
+              v-if="countdown"
+              class="btn__countdown"
+              v-html="countdown"
+            />
+            Отправить еще раз
+          </ButtonLight>
+        </div>
+        <ButtonPrimary
+          class="mb-15"
+          type="full"
+          @click.native="openProfile"
+        >
+          Продолжить
+        </ButtonPrimary>
+        <ButtonLight
+          type="border"
+          size="large"
+        >
+          Ввести другой email
         </ButtonLight>
-      </div>
-      <ButtonPrimary
-        class="mb-15"
-        type="full"
-      >
-        Продолжить
-      </ButtonPrimary>
-      <ButtonLight
-        type="border"
-        size="large"
-      >
-        Ввести другой email
-      </ButtonLight>
 
-    </form>
-    <template v-else>
-      <!-- @slot -->
-      <slot :auth="auth"/>
-    </template>
+      </form>
+      <form
+        v-else
+        key="auth"
+      >
+        <!-- @slot Основная форма аунтентификации-->
+        <slot :auth="auth"/>
+      </form>
+    </transition>
   </AsideBase>
 </template>
 
@@ -143,17 +153,32 @@ export default {
         }
       }, 1000);
     },
+
+    openProfile() {
+      this.$store.dispatch('aside/setAsideStatus', { name: 'signin', status: false });
+      this.$store.dispatch('aside/setAsideStatus', { name: 'signup', status: false });
+      this.$store.dispatch('aside/setAsideStatus', { name: 'profile', status: true });
+    },
   },
 };
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
   @import '@/assets/sass/vars.sass'
   .btn__countdown
     width: 100%
     margin-bottom: 5px
     font-size: 16px
     color: white
+
+  // Анимация появления и скрытия сайдбара
+  .auth-enter-active, .auth-leave-active
+    // transform: translate(-50px, 0)
+    transition: opacity .3s
+
+  .auth-enter, .auth-leave-to
+    opacity: 0
+
 </style>
 
 <docs>

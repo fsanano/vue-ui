@@ -10,7 +10,7 @@ const state = () => ({
    */
   signin: false,
   signup: false,
-  profile: true,
+  profile: false,
   /**
    * Данные для вывода в сайдбаре пользователя
    * Могут быть данные любого пользователя.
