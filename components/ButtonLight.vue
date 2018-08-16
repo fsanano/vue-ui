@@ -26,12 +26,24 @@ export default {
     /**
      * Размер кнопки, принимает один из трех вариантов: 'small', 'normal', 'large'
      */
-    typeof: {
+    size: {
       type: String,
       required: false,
-      default: '',
+      default: 'medium',
       validator(value) {
-        return ['code', 'full', 'header', 'history'].indexOf(value) !== -1;
+        return ['small', 'medium', 'large', 'high'].indexOf(value) !== -1;
+      },
+    },
+
+    /**
+     * Размер кнопки, принимает один из трех вариантов: 'small', 'normal', 'large'
+     */
+    type: {
+      type: String,
+      required: false,
+      default: 'fill',
+      validator(value) {
+        return ['fill', 'border', 'more'].indexOf(value) !== -1;
       },
     },
   },
@@ -41,7 +53,7 @@ export default {
      * @return {Array} [Массив классов]
      */
     modificator() {
-      return ['button__light', `button__light--${this.typeof}`];
+      return ['button__light', `button__light--${this.type}`, `button__light--${this.size}`];
     },
   },
 };
@@ -52,20 +64,63 @@ export default {
 
   .button.button__light
     padding: 3px 15px
-    // border-radius: 5px
-    box-shadow: inset 0 0 0 1px rgba($primary-color, .15)
-    text-align: center
-    font-size: 15px
-    color: $accent
-    background-color: transparent
     transition: .3s
-    &:hover,
-    &:active
-      box-shadow: inset 0 0 0 1px $accent
+    background-color: transparent
 
-  .button__light
-    &.button__light--code
-      height: 72px
+    // Type border
+    &.button__light--border
+      height: 35px
+      font-size: 16px
+      box-shadow: inset 0 0 0 1px rgba($primary-color, .15)
+      color: $accent
+      &:hover
+        box-shadow: inset 0 0 0 1px $accent
+      &:active,
+      &.active
+        box-shadow: inset 0 0 0 1px $secondary
+        color: $secondary
+
+    // Type fill
+    &.button__light--fill
+      font-size: 12px
+      background-color: $primary-color
+      color: $secondary-color
+      &:hover
+        background-color: $accent
+        color: $secondary-color
+      &:active,
+      &.active
+        box-shadow: inset 0 2px 0 1px #00000059;
+        color: $primary-color
+        background-color: $secondary
+
+    // Type more
+    &.button__light--more
+      font-size: 15px
+      background-color: #413947
+      color: $primary-color
+      box-shadow: inset 0 1px 0 0 rgba($primary-color, 0.1)
+      &.button__light--large
+        width: 100%
+        height: 60px
+        text-align: center
+      &:hover
+        background-color: $primary-color
+        color: $secondary-color
+
+    &.button__light--fill,
+    &.button__light--more
+      font-weight: 700
+      text-transform: uppercase
+
+
+    // Size medium
+    &.button__light--medium
+      height: 40px
+
+    // Size high
+    &.button__light--high
+      height: 75px
       width: 100px
       font-size: 14px
       white-space: normal
@@ -78,8 +133,8 @@ export default {
       font-size: 15px
 
     &.button__light--large
-      height: 100%
-      font-size: 20px
+      // height: 100%
+      // font-size: 20px
 </style>
 
 <docs>

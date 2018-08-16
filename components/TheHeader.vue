@@ -10,7 +10,7 @@
             src="~/assets/img/logo.png"
             alt="logo">
         </a>
-        <ButtonLight type="header">Как играть</ButtonLight>
+        <ButtonLight type="border">Как играть</ButtonLight>
         <ul class="header__nav d-flex">
           <li
             v-for="item in menu"

@@ -17,7 +17,8 @@
         />
         <ButtonLight
           :is-disabled="countdown > 0"
-          type="code"
+          type="border"
+          size="high"
           @click.prevent.native="startCountdown"
         >
           <span

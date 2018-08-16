@@ -24,10 +24,22 @@
         />
       </div>
       <ButtonLight
-        type="history"
+        :class="{'active': showDropdown}"
+        type="fill"
         @click.native="toggleDropdown"
       >
-        Подробнее
+        <span
+          v-if="showDropdown"
+          class="btn__content"
+        >
+          Скрыть
+        </span>
+        <span
+          v-else
+          class="btn__content"
+        >
+          Подробнее
+        </span>
       </ButtonLight>
     </div>
     <div
@@ -114,6 +126,9 @@ export default {
   .data__value
     font-size: 24px
     font-weight: 700
+
+  .btn__content
+    width: 70px
 
 </style>
 

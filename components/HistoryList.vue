@@ -1,6 +1,6 @@
 <template>
   <div class="history__container">
-    <div class="history__title">История игр</div>
+    <div class="history__btn-wrap history__title">История игр</div>
     <div class="history__games">
       <HistoryItem
         v-for="(item, i) in list"
@@ -8,11 +8,20 @@
         :payload="item"
       />
     </div>
+    <div class="history__btn-wrap">
+      <ButtonLight
+        type="more"
+        size="large"
+      >
+        Показать еще
+      </ButtonLight>
+    </div>
   </div>
 </template>
 
 <script>
 import HistoryItem from '@/components/HistoryItem.vue';
+import ButtonLight from '@/components/ButtonLight.vue';
 /**
  * Компонент списка истории всех игр
  */
@@ -20,6 +29,7 @@ export default {
   name: 'HistoryList',
   components: {
     HistoryItem,
+    ButtonLight,
   },
   props: {
     /**
@@ -45,11 +55,13 @@ export default {
   @import '@/assets/sass/vars.sass'
 
   .history__title
-    padding: 20px 30px
-    padding-bottom: 0
     font-size: 35px
     font-weight: bold
     font-family: 'Montserrat Alternates', sans-serif
+
+  .history__btn-wrap
+    padding: 20px 30px
+    padding-bottom: 0
 </style>
 
 <docs>
