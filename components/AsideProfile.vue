@@ -43,7 +43,14 @@
 
     <HistoryList :list="history"/>
 
-    <!-- <div class="profile__control"></div> -->
+    <div class="profile__control">
+      <ButtonLight
+        type="fill"
+        @click.native="logout"
+      >
+        Выход
+      </ButtonLight>
+    </div>
   </AsideBase>
 </template>
 
@@ -131,7 +138,12 @@ export default {
       return `${this.profile.wins} %`;
     },
   },
-  methods: {},
+  methods: {
+    logout() {
+      this.$store.dispatch('aside/setAsideStatus', { name: 'profile', status: false });
+      this.$store.dispatch('auth/logout');
+    },
+  },
 };
 </script>
 
@@ -159,6 +171,10 @@ export default {
     font-size: 42px
     font-weight: bold
     line-height: 1
+
+  .profile__control
+    padding: 30px
+    padding-bottom: 0
 
 </style>
 
