@@ -69,7 +69,7 @@ export default {
     close() {
       const { name } = this;
       this.$preventScroll.disable();
-      this.$store.dispatch('common/setAsideStatus', { name, status: false });
+      this.$store.dispatch('aside/setAsideStatus', { name, status: false });
     },
   },
 };
@@ -83,6 +83,7 @@ export default {
     background-color: $secondary-bg
     display: flex
     flex-flow: column nowrap
+    border-left: 1px solid rgba($primary-color, .1)
 
   .aside__title
     padding: 0 27px

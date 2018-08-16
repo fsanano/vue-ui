@@ -86,7 +86,7 @@ export default {
      */
     openAside(name) {
       this.$preventScroll.enable();
-      this.$store.dispatch('common/setAsideStatus', { name, status: true });
+      this.$store.dispatch('aside/setAsideStatus', { name, status: true });
     },
   },
 };
