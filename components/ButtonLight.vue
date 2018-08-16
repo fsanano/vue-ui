@@ -79,6 +79,8 @@ export default {
       &.active
         box-shadow: inset 0 0 0 1px $secondary
         color: $secondary
+      &.button--disabled
+        color: $disabled-color
 
     // Type fill
     &.button__light--fill
@@ -93,6 +95,9 @@ export default {
         box-shadow: inset 0 2px 0 1px #00000059;
         color: $primary-color
         background-color: $secondary
+      &.button--disabled
+        color: $disabled-color
+        background-color: $disabled-bg
 
     // Type more
     &.button__light--more

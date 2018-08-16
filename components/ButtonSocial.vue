@@ -83,7 +83,7 @@ export default {
       background-color: blue
 
   .button__social-text
-    font-size: 15px
+    font-size: 20px
     font-weight: bold
     +below($md)
       display: none

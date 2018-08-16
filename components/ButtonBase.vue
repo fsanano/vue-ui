@@ -81,7 +81,6 @@ export default {
 
     &.button--disabled,
     &.button--loaded
-      color: #847e88
       pointer-events: none
       &:focus
         outline: none

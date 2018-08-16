@@ -189,7 +189,7 @@ export default {
       border-radius: 10px
       width: 10px
       height: 10px
-      background-color: $disabled-bg
+      background-color: rgba($primary-color-invert, .15)
 
   .input__field--small
     width: 25px
