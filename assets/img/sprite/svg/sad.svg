@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="37px" height="37px" viewBox="0 0 37 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Sadness</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Public-Profile" transform="translate(-512.000000, -772.000000)">
+            <g id="Окошко" transform="translate(483.000000, 0.000000)">
+                <g id="История" transform="translate(0.000000, 721.000000)">
+                    <g id="1" transform="translate(30.000000, 49.000000)">
+                        <g id="Sadness" transform="translate(0.000000, 3.000000)">
+                            <circle id="Oval-4" stroke="#847E88" cx="17.5" cy="17.5" r="18"></circle>
+                            <circle id="Oval" fill="#FFFFFF" fill-rule="nonzero" cx="11.5" cy="12.5" r="1.5"></circle>
+                            <circle id="Oval" fill="#FFFFFF" fill-rule="nonzero" cx="23.5" cy="12.5" r="1.5"></circle>
+                            <path d="M9.45288086,20.9622192 L25.3546143,24.090332" id="Path-4" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(17.403748, 22.526276) scale(-1, 1) translate(-17.403748, -22.526276) "></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

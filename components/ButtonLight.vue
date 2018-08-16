@@ -11,7 +11,7 @@
 import ButtonBase from '@/components/ButtonBase.vue';
 import button from '../mixins/button.js';
 /**
- * Базовый компонент light кнопки.   
+ * Базовый компонент light кнопки.
  * При размере `large` меняется выравнивание текста и размеры иконки.
  */
 export default {
@@ -31,7 +31,7 @@ export default {
       required: false,
       default: '',
       validator(value) {
-        return ['code', 'full', 'header'].indexOf(value) !== -1;
+        return ['code', 'full', 'header', 'history'].indexOf(value) !== -1;
       },
     },
   },

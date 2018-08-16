@@ -87,11 +87,12 @@ export default {
 
   .aside__title
     padding: 0 27px
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Montserrat Alternates', sans-serif
     font-size: 35px
     font-weight: 500
     line-height: 2.15
     border-bottom: 1px solid rgba($primary-color, .1)
+    background-color: rgba($primary-color-invert, .15)
 
   .aside__close
     position: absolute
