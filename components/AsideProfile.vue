@@ -79,11 +79,19 @@ export default {
   },
   data() {
     return {
+      /**
+       * Данные текущего пользователя
+       * @type {Object}
+       */
       profile: {
         balance: 0,
         games: 12,
         wins: 10,
       },
+      /**
+       * История игр текущего пользователя
+       * @type {Array}
+       */
       history: [
         {
           bank: 20,
@@ -139,6 +147,10 @@ export default {
     },
   },
   methods: {
+    /**
+     * Выход из учетной записи
+     * @return {[type]} [description]
+     */
     logout() {
       this.$store.dispatch('aside/setAsideStatus', { name: 'profile', status: false });
       this.$store.dispatch('auth/logout');

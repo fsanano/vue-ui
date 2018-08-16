@@ -1,5 +1,8 @@
 <template>
-  <transition name="aside">
+  <transition
+    name="aside"
+    mode="out-in"
+  >
     <aside
       v-click-outside="close"
       v-if="status"
@@ -121,6 +124,7 @@ export default {
 
   .aside-enter, .aside-leave-to
     transform: translate(100%, 0)
+    opacity: 0
 </style>
 
 <docs>
