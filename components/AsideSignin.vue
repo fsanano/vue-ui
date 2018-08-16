@@ -16,7 +16,7 @@
           <FormSignin
             @step="changeStep('code')"
           />
-          <AsideSocial/>
+          <FormSocial/>
         </div>
 
         <FormCode
@@ -34,7 +34,7 @@
 import AsideBase from '@/components/AsideBase.vue';
 import FormSignin from '@/components/FormSignin.vue';
 import FormCode from '@/components/FormCode.vue';
-import AsideSocial from '@/components/AsideSocial.vue';
+import FormSocial from '@/components/FormSocial.vue';
 /**
  * Компонент сайдбара для входа
  */
@@ -44,7 +44,7 @@ export default {
     AsideBase,
     FormSignin,
     FormCode,
-    AsideSocial,
+    FormSocial,
   },
   mixins: [],
   props: {

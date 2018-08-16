@@ -13,7 +13,7 @@ import ButtonSocial from '@/components/ButtonSocial.vue';
  * Компонент входа через социальные сети
  */
 export default {
-  name: 'AsideSocial',
+  name: 'FormSocial',
   components: {
     ButtonSocial,
   },
@@ -56,6 +56,6 @@ export default {
 
 <docs>
 ```
-<AsideSocial/>
+<FormSocial/>
 ```
 </docs>

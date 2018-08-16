@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: 'AsideStock',
+  name: 'TheStock',
   props: {
     title: {
       type: String,
@@ -56,6 +56,6 @@ export default {
 
 <docs>
 ```
-<AsideStock>Текст акции</AsideStock>
+<TheStock>Текст акции</TheStock>
 ```
 </docs>

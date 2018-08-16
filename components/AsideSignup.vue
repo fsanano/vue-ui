@@ -1,63 +1,51 @@
 <template>
-  <AsideAuth
+  <AsideBase
     :status="status"
     name="signup"
     title="Регистарция"
   >
-    <template slot-scope="scope">
-      <form
-        class="auth__container"
-        @submit.prevent="send(scope)"
+    <template>
+      <transition
+        name="auth"
+        mode="out-in"
       >
-        <div class="mb-15">
-          <InputText
-            v-model="email"
-            title="Электронная почта"
-          />
+        <div
+          v-if="step === 'form'"
+          key="form"
+        >
+          <FormSignup @step="changeStep('code')"/>
+          <FormSocial/>
+          <TheStock>
+            Зарегистрируйся и получи одну игру бесплатно!
+          </TheStock>
         </div>
-        <div class="mb-15">
-          <InputCheckbox v-model="userAgreement">
-            Я принимаю
-            <a
-              href=""
-              class="aside__link"
-            >
-              условия соглашения
-            </a>
-          </InputCheckbox>
-        </div>
-        <ButtonPrimary>Регистрация</ButtonPrimary>
-      </form>
 
-      <AsideSocial/>
-
-      <AsideStock>
-        Зарегистрируйся и получи одну игру бесплатно!
-      </AsideStock>
+        <FormCode
+          v-if="step === 'code'"
+          key="code"
+          @step="changeStep('credentials')"
+        />
+      </transition>
     </template>
 
-  </AsideAuth>
+  </AsideBase>
 </template>
 
 <script>
-import AsideAuth from '@/components/AsideAuth.vue';
-import InputText from '@/components/InputText.vue';
-import InputCheckbox from '@/components/InputCheckbox.vue';
-import ButtonPrimary from '@/components/ButtonPrimary.vue';
-import AsideSocial from '@/components/AsideSocial.vue';
-import AsideStock from '@/components/AsideStock.vue';
+import AsideBase from '@/components/AsideBase.vue';
+import FormSignup from '@/components/FormSignup.vue';
+import FormSocial from '@/components/FormSocial.vue';
+import TheStock from '@/components/TheStock.vue';
 /**
  * Компонент сайдбара для регистрации
  */
 export default {
   name: 'AsideSignup',
   components: {
-    AsideAuth,
-    InputText,
-    InputCheckbox,
-    ButtonPrimary,
-    AsideSocial,
-    AsideStock,
+    AsideBase,
+    FormSignup,
+    FormSocial,
+    TheStock,
   },
   mixins: [],
   props: {
@@ -69,27 +57,16 @@ export default {
   },
   data() {
     return {
-      /**
-       * Почта пользовател
-       * @type {String}
-       */
-      email: '',
-      /**
-       * Флаг состояния подтверждения условия соглашения
-       * @type {Boolean}
-       */
-      userAgreement: false,
+      step: 'form',
     };
   },
   methods: {
     /**
-     * Метод вызова родительского метода
-     * Если получится вынести метод в родительский елемент
-     * то этот можно будет удалить
-     * @param  {Object} scope [Список методов родительского элемента]
+     * Метод изменения активного шага формы регистрации
+     * @param  {String} step [Название формы]
      */
-    send(scope) {
-      scope.auth();
+    changeStep(step) {
+      this.step = step;
     },
   },
 };
