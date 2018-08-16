@@ -11,7 +11,7 @@
 <script>
 import AsideBase from '@/components/AsideBase.vue';
 /**
- * Компонент сайдбара для входа
+ * Компонент сайдбара данных юзера
  */
 export default {
   name: 'AsideProfile',
