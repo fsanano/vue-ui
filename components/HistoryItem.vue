@@ -28,17 +28,9 @@
         type="fill"
         @click.native="toggleDropdown"
       >
-        <span
-          v-if="showDropdown"
-          class="btn__content"
-        >
-          Скрыть
-        </span>
-        <span
-          v-else
-          class="btn__content"
-        >
-          Подробнее
+        <span class="btn__content">
+          <template v-if="showDropdown">Скрыть</template>
+          <template v-else>Подробнее</template>
         </span>
       </ButtonLight>
     </div>
