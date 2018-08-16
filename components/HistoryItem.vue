@@ -24,7 +24,7 @@
         />
       </div>
       <ButtonLight
-        typeof="history"
+        type="history"
         @click.native="toggleDropdown"
       >
         Подробнее

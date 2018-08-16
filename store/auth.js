@@ -2,7 +2,15 @@
 const SET_USER_DATA = 'AUTH/SET_USER_DATA';
 
 const state = () => ({
+  /**
+   * Флаг состояния аунтентификации пользователя
+   * @type {Boolean}
+   */
   auth: false,
+  /**
+   * Данные пользователя
+   * @type {Object}
+   */
   data: {},
 });
 

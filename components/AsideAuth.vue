@@ -17,7 +17,7 @@
         />
         <ButtonLight
           :is-disabled="countdown > 0"
-          typeof="code"
+          type="code"
           @click.prevent.native="startCountdown"
         >
           <span
@@ -30,11 +30,11 @@
       </div>
       <ButtonPrimary
         class="mb-15"
-        typeof="full"
+        type="full"
       >
         Продолжить
       </ButtonPrimary>
-      <ButtonLight typeof="full">Ввести другой email</ButtonLight>
+      <ButtonLight type="full">Ввести другой email</ButtonLight>
 
     </form>
     <template v-else>
