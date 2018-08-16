@@ -125,6 +125,15 @@ export default {
   .aside-enter, .aside-leave-to
     transform: translate(100%, 0)
     opacity: 0
+
+
+  // Анимация появления и скрытия сайдбара
+  .auth-enter-active, .auth-leave-active
+    // transform: translate(-50px, 0)
+    transition: opacity .3s
+
+  .auth-enter, .auth-leave-to
+    opacity: 0
 </style>
 
 <docs>

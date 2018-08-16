@@ -1,33 +1,39 @@
 <template>
-  <AsideAuth
+  <AsideBase
     :status="status"
     name="signin"
     title="Вход"
   >
-    <template slot-scope="scope">
-      <form
-        class="auth__container"
-        @submit.prevent="send(scope)"
+    <template>
+      <transition
+        name="auth"
+        mode="out-in"
       >
-        <div class="mb-15">
-          <InputText
-            v-model="email"
-            title="Электронная почта"
+        <div
+          v-if="step === 'form'"
+          key="form"
+        >
+          <FormSignin
+            @step="changeStep('code')"
           />
+          <AsideSocial/>
         </div>
-        <ButtonPrimary>Войти</ButtonPrimary>
-      </form>
 
-      <AsideSocial/>
+        <FormCode
+          v-if="step === 'code'"
+          key="code"
+          @step="changeStep('')"
+        />
+      </transition>
     </template>
 
-  </AsideAuth>
+  </AsideBase>
 </template>
 
 <script>
-import AsideAuth from '@/components/AsideAuth.vue';
-import InputText from '@/components/InputText.vue';
-import ButtonPrimary from '@/components/ButtonPrimary.vue';
+import AsideBase from '@/components/AsideBase.vue';
+import FormSignin from '@/components/FormSignin.vue';
+import FormCode from '@/components/FormCode.vue';
 import AsideSocial from '@/components/AsideSocial.vue';
 /**
  * Компонент сайдбара для входа
@@ -35,9 +41,9 @@ import AsideSocial from '@/components/AsideSocial.vue';
 export default {
   name: 'AsideSignin',
   components: {
-    AsideAuth,
-    InputText,
-    ButtonPrimary,
+    AsideBase,
+    FormSignin,
+    FormCode,
     AsideSocial,
   },
   mixins: [],
@@ -53,23 +59,13 @@ export default {
   },
   data() {
     return {
-      /**
-       * Почта пользователя
-       * @type {String}
-       */
-      email: '',
+      step: 'form',
     };
   },
 
   methods: {
-    /**
-     * Метод вызова родительского метода
-     * Если получится вынести метод в родительский елемент
-     * то этот можно будет удалить
-     * @param  {Object} scope [Список методов родительского элемента]
-     */
-    send(scope) {
-      scope.auth();
+    changeStep(step) {
+      this.step = step;
     },
   },
 
