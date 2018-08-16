@@ -35,7 +35,12 @@
       >
         Продолжить
       </ButtonPrimary>
-      <ButtonLight type="full">Ввести другой email</ButtonLight>
+      <ButtonLight
+        type="border"
+        size="large"
+      >
+        Ввести другой email
+      </ButtonLight>
 
     </form>
     <template v-else>

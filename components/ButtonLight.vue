@@ -82,6 +82,11 @@ export default {
       &.button--disabled
         color: $disabled-color
 
+      &.button__light--large
+        width: 100%
+        height: 55px
+        text-align: center
+
     // Type fill
     &.button__light--fill
       font-size: 12px
