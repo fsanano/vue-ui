@@ -22,7 +22,7 @@
         <FormCode
           v-if="step === 'code'"
           key="code"
-          @step="changeStep('')"
+          @step="close"
         />
       </transition>
     </template>
@@ -66,6 +66,9 @@ export default {
   methods: {
     changeStep(step) {
       this.step = step;
+    },
+    close() {
+      this.$store.dispatch('aside/setAsideStatus', { name:'signin', status: false});
     },
   },
 
