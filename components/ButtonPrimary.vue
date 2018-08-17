@@ -58,6 +58,7 @@ export default {
       box-shadow: inset 0 3px 0 1px rgba($primary-color-invert, .3);
       background-color: $secondary !important;
       background-image: none !important
+      color: $primary-color
     &.button--disabled
       background-color: $disabled-bg
       color: $disabled-color

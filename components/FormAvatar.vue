@@ -81,7 +81,9 @@ export default {
   computed: {},
   watch: {
     custom(newVal) {
-      console.info('newVal', newVal);
+      if (newVal) {
+        this.avatar = 'custom';
+      }
     },
   },
   methods: {
@@ -171,6 +173,7 @@ export default {
     top: 10px
     background: $accent
     padding: 4px
+    cursor: pointer
     svg
       fill: black
 </style>
