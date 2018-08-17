@@ -117,9 +117,12 @@ export default {
     font-weight: bold
 
   .avatar__list
-    width: 465px
     display: flex
     flex-flow: row wrap
+    width: 465px
+    height: 280px
+    overflow-y: auto
+    overflow-x: hidden
 
   .avatar__item
     position: relative
