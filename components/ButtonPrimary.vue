@@ -38,7 +38,9 @@ export default {
   .button--primary
     padding: 17px 32px 18px
     font-weight: bold
-    background-image: linear-gradient(to bottom, $accent-gradient-start, $accent-gradient-end)
+    background-color: $accent
+    // background-image: linear-gradient(to bottom, $accent-gradient-start, $accent-gradient-end)
+    border: 1px solid $primary-color-invert
     color: $primary-color-invert
     +below(480px)
       width: 100%
@@ -49,11 +51,16 @@ export default {
       +below($lg)
         outline: none
     &:hover
-      +above($lg)
-        background-image: linear-gradient(to bottom, $secondary-gradient-start, $secondary-gradient-end)
+      box-shadow: inset 0 3px 0 1px rgba($primary-color, 0.35), inset 0 0 5px 0 rgba($primary-color, 0.65)
+      background-image: linear-gradient(to bottom, $accent-gradient-start, $accent-gradient-end)
+      color: $primary-color
     &:active
-      +below($lg)
-        background-color: $secondary
+      box-shadow: inset 0 3px 0 1px rgba($primary-color-invert, .3);
+      background-color: $secondary !important;
+      background-image: none !important
+    &.button--disabled
+      background-color: $disabled-bg
+      color: $disabled-color
 </style>
 
 <docs>
