@@ -10,7 +10,7 @@
       />
     </div>
     <FormAvatar/>
-    <ButtonPrimary>Завершить регистрацию</ButtonPrimary>
+    <ButtonPrimary @click.native="send">Завершить регистрацию</ButtonPrimary>
   </form>
 </template>
 

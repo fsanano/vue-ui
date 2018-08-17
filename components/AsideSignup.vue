@@ -9,10 +9,6 @@
         name="auth"
         mode="out-in"
       >
-        <FormCredentials
-          v-if="step === 'credentials'"
-          key="credentials"
-        />
         <div
           v-if="step === 'form'"
           key="form"
@@ -26,6 +22,12 @@
           v-if="step === 'code'"
           key="code"
           @step="changeStep('credentials')"
+        />
+
+        <FormCredentials
+          v-if="step === 'credentials'"
+          key="credentials"
+          @step="close"
         />
 
       </transition>
@@ -64,7 +66,7 @@ export default {
   },
   data() {
     return {
-      step: 'credentials',
+      step: 'form',
     };
   },
   methods: {
@@ -74,6 +76,9 @@ export default {
      */
     changeStep(step) {
       this.step = step;
+    },
+    close() {
+      this.$store.dispatch('aside/setAsideStatus', { name:'signup', status: false});
     },
   },
 };
