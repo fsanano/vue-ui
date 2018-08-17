@@ -4,15 +4,22 @@
     title="Пополнение счета"
     name="refill"
   >
-    <h1>stnes</h1>
+    <div class="d-flex payment__container">
+      <PaymentSystems
+        :active="activePaymentSystem"
+        :list="list"
+        @set="setPayment"
+      />
+      <FormPayment :payload="form"/>
+    </div>
   </AsideBase>
 </template>
 
 <script>
 import AsideBase from '@/components/AsideBase.vue';
 import IconBase from '@/components/IconBase.vue';
-import ButtonLight from '@/components/ButtonLight.vue';
-import HistoryList from '@/components/HistoryList.vue';
+import PaymentSystems from '@/components/PaymentSystems.vue';
+import FormPayment from '@/components/FormPayment.vue';
 /**
  * Компонент сайдбара данных юзера
  */
@@ -21,8 +28,8 @@ export default {
   components: {
     AsideBase,
     IconBase,
-    ButtonLight,
-    HistoryList,
+    PaymentSystems,
+    FormPayment,
   },
   props: {
     status: {
@@ -32,14 +39,104 @@ export default {
     },
   },
   data() {
-    return {};
+    return {
+      /**
+       * Выбранная система оплаты
+       */
+      activePaymentSystem: {
+        icon: 'card',
+        name: 'Банк. карта',
+        type: 'card',
+      },
+      /**
+       * Список систем оплаты
+       */
+      list: [
+        {
+          icon: 'card',
+          name: 'Банк. карта',
+          type: 'card',
+        },
+        {
+          icon: 'beeline',
+          name: 'Билайн',
+          type: 'phone',
+        },
+        {
+          icon: 'qiwi',
+          name: 'Qiwi',
+          type: 'phone',
+        },
+        {
+          icon: 'mts',
+          name: 'МТС',
+          type: 'phone',
+        },
+        {
+          icon: 'yandex',
+          name: 'Яндекс.Деньги',
+          type: 'card',
+        },
+        {
+          icon: 'megafon',
+          name: 'Мегафон',
+          type: 'phone',
+        },
+        {
+          icon: 'privat24',
+          name: 'Privat24',
+          type: 'card',
+        },
+        {
+          icon: 'tele2',
+          name: 'Теле2',
+          type: 'phone',
+        },
+        {
+          icon: 'payeer',
+          name: 'Payeer',
+          type: 'card',
+        },
+        {
+          icon: 'perfect-money',
+          name: 'Perfect Money',
+          type: 'card',
+        },
+      ],
+    };
   },
-  methods: {},
+  computed: {
+    /**
+     * Вспомогательные данные для формы оплаты
+     */
+    form() {
+      return {
+        info: {
+          min: 99,
+          commission: 0,
+        },
+        payment: this.activePaymentSystem,
+      };
+    },
+  },
+  methods: {
+    /**
+     * Метод для выбора системы оплаты
+     * @param {Object} system [Объект системы оплаты]
+     */
+    setPayment(system) {
+      console.info('system', system);
+      this.activePaymentSystem = system;
+    },
+  },
 };
 </script>
 
 <style lang="sass" scoped>
   @import '@/assets/sass/vars.sass'
+
+  .payment__container
+    margin-bottom: -30px
 </style>
 
 <docs>

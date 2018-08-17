@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="20px" viewBox="0 0 30 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #FFFFFF;">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/flag/azerbaijan</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons/flag/azerbaijan" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-13" fill="#4490C3" x="0" y="0" width="30" height="6"></rect>
+        <rect id="Rectangle-13-Copy" fill="#D61E42" x="0" y="6" width="30" height="8"></rect>
+        <rect id="Rectangle-13-Copy-2" fill="#49AE68" x="0" y="14" width="30" height="6"></rect>
+        <g id="if_21_Ensign_Flag_Nation_Azerbaijan_2634397" transform="translate(11.000000, 7.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Group-7">
+                <path d="M3.68200837,5.50478469 C2.34309623,5.50478469 1.25523013,4.38516746 1.25523013,3 C1.25523013,1.62200957 2.34309623,0.502392344 3.68200837,0.502392344 C4.17015342,0.502392344 4.62343096,0.653110048 5,0.90430622 C4.47001395,0.351674641 3.73082287,0 2.91492329,0 C1.30404463,0 0,1.34210526 0,3 C0,4.65789474 1.30404463,6 2.91492329,6 C3.73082287,6 4.47001395,5.65550239 5,5.09569378 C4.62343096,5.35406699 4.17015342,5.50478469 3.68200837,5.50478469" id="XMLID_4_"></path>
+                <polygon id="XMLID_3_" points="7.41071429 4.41964286 6.39285714 3.95535714 5.99107143 5 5.59821429 3.95535714 4.58035714 4.41071429 5.04464286 3.39285714 4 3 5.04464286 2.60714286 4.58035714 1.58035714 5.60714286 2.04464286 6 1 6.39285714 2.05357143 7.41071429 1.58928571 6.94642857 2.60714286 8 3 6.94642857 3.39285714"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="20px" viewBox="0 0 30 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #FFFFFF;">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/flag/russia</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="30" height="20"></rect>
+    </defs>
+    <use id="Mask" fill="#D8D8D8" xlink:href="#path-1"></use>
+    <rect id="Rectangle-path" fill="#F1F1F1" fill-rule="nonzero" mask="url(#mask-2)" x="-1" y="0" width="35" height="7"></rect>
+    <rect id="Rectangle-path" fill="#324095" fill-rule="nonzero" mask="url(#mask-2)" x="-1" y="7" width="39.1924734" height="7"></rect>
+    <rect id="Rectangle-path" fill="#D81F26" fill-rule="nonzero" mask="url(#mask-2)" x="-1" y="14" width="39.1924734" height="6"></rect>
+</svg>
