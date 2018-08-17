@@ -14,7 +14,7 @@
         Я принимаю
         <a
           href=""
-          class="aside__link"
+          class="text--link text--accent"
         >
           условия соглашения
         </a>
@@ -55,7 +55,7 @@ export default {
   methods: {
     send() {
       this.$emit('step');
-      },
+    },
   },
 };
 </script>

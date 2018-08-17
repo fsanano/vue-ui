@@ -7,7 +7,7 @@
     <div class="profile__data d-flex">
       <div class="profile__avatar">
         <img
-          src="/ufo.png"
+          src="/avatars/ufo.png"
           alt="profile"
         >
       </div>

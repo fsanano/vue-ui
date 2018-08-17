@@ -9,6 +9,10 @@
         name="auth"
         mode="out-in"
       >
+        <FormCredentials
+          v-if="step === 'credentials'"
+          key="credentials"
+        />
         <div
           v-if="step === 'form'"
           key="form"
@@ -34,6 +38,7 @@
 import AsideBase from '@/components/AsideBase.vue';
 import FormSignup from '@/components/FormSignup.vue';
 import FormSocial from '@/components/FormSocial.vue';
+import FormCredentials from '@/components/FormCredentials.vue';
 import TheStock from '@/components/TheStock.vue';
 import FormCode from '@/components/FormCode.vue';
 /**
@@ -45,6 +50,7 @@ export default {
     AsideBase,
     FormSignup,
     FormSocial,
+    FormCredentials,
     TheStock,
     FormCode,
   },
@@ -58,7 +64,7 @@ export default {
   },
   data() {
     return {
-      step: 'form',
+      step: 'credentials',
     };
   },
   methods: {

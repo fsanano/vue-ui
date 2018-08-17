@@ -5,11 +5,11 @@
   >
     <div class="mb-15">
       <InputText
-        v-model="email"
-        title="Электронная почта"
+        v-model="name"
+        title="Введите имя"
       />
     </div>
-    <ButtonPrimary>Войти</ButtonPrimary>
+    <ButtonPrimary>Завершить регистрацию</ButtonPrimary>
   </form>
 </template>
 
@@ -17,28 +17,27 @@
 import InputText from '@/components/InputText.vue';
 import ButtonPrimary from '@/components/ButtonPrimary.vue';
 /**
- * Компонент формы входа
+ * Компонент формы добавления личных данных
  */
 export default {
-  name: 'FormSignin',
+  name: 'FormCredentials',
   components: {
     InputText,
     ButtonPrimary,
   },
+  props: {},
   data() {
     return {
-      /**
-       * Почта пользователя
-       * @type {String}
-       */
-      email: '',
+      name: '',
     };
   },
+  computed: {},
   methods: {
     send() {
       this.$emit('step');
     },
   },
+  errorCaptured() {},
 };
 </script>
 
@@ -48,6 +47,6 @@ export default {
 
 <docs>
 ```
-<FormSignin/>
+<FormCredentials/>
 ```
 </docs>
