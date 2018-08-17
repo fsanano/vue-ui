@@ -100,7 +100,7 @@ export default {
           rate: 10,
           members:[
             {
-              id: 123,
+              id: 1,
               avatar: 1,
             },
           ],
@@ -114,7 +114,7 @@ export default {
           rate: 10,
           members:[
             {
-              id: 123,
+              id: 2,
               avatar: 1,
             },
           ],
@@ -128,15 +128,15 @@ export default {
           rate: 10,
           members:[
             {
-              id: 123,
+              id: 3,
               avatar: 1,
             },
             {
-              id: 123,
+              id: 4,
               avatar: 1,
             },
             {
-              id: 123,
+              id: 5,
               avatar: 1,
             },
           ],
