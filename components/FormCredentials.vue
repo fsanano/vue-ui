@@ -9,6 +9,7 @@
         title="Введите имя"
       />
     </div>
+    <FormAvatar/>
     <ButtonPrimary>Завершить регистрацию</ButtonPrimary>
   </form>
 </template>
@@ -16,6 +17,7 @@
 <script>
 import InputText from '@/components/InputText.vue';
 import ButtonPrimary from '@/components/ButtonPrimary.vue';
+import FormAvatar from '@/components/FormAvatar.vue';
 /**
  * Компонент формы добавления личных данных
  */
@@ -24,6 +26,7 @@ export default {
   components: {
     InputText,
     ButtonPrimary,
+    FormAvatar,
   },
   props: {},
   data() {
