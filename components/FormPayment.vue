@@ -1,5 +1,8 @@
 <template>
-  <form class="payment__form">
+  <form
+    class="payment__form"
+    @submit.prevent
+  >
     <InputPhone
       v-if="payload.payment.type === 'phone'"
       v-model="userPhone"
@@ -30,7 +33,10 @@
         </div>
       </div>
     </div>
-    <ButtonPrimary class="w-100">
+    <ButtonPrimary
+      class="w-100"
+      @click.native="setStep"
+    >
       {{ btnText }}
     </ButtonPrimary>
   </form>
@@ -82,7 +88,11 @@ export default {
       }
     },
   },
-  methods: {},
+  methods: {
+    setStep() {
+      this.$emit('set');
+    },
+  },
 };
 </script>
 

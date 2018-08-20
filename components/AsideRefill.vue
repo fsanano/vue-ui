@@ -13,10 +13,16 @@
         :list="list"
         @set="setPayment"
       />
-      <FormPayment :payload="form"/>
+      <FormPayment
+        :payload="form"
+        @set="setStep('confirm')"
+      />
     </div>
 
-    <FormPaymentConfirm :payload="form"/>
+    <FormPaymentConfirm
+      v-if="step === 'confirm'"
+      :payload="confirm"
+    />
 
   </AsideBase>
 </template>
@@ -48,6 +54,10 @@ export default {
   },
   data() {
     return {
+      /**
+       * Шаг оплаты
+       * @type {String}
+       */
       step: 'choose',
       /**
        * Выбранная система оплаты
@@ -127,6 +137,12 @@ export default {
         payment: this.activePaymentSystem,
       };
     },
+    confirm() {
+      return {
+        amount: 99,
+        way: this.activePaymentSystem,
+      };
+    },
   },
   methods: {
     /**
@@ -134,8 +150,14 @@ export default {
      * @param {Object} system [Объект системы оплаты]
      */
     setPayment(system) {
-      console.info('system', system);
       this.activePaymentSystem = system;
+    },
+    /**
+     * Изменение шага оплаты
+     * @param {String} step [Название шага]
+     */
+    setStep(step) {
+      this.step = step;
     },
   },
 };
