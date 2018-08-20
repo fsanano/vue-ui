@@ -1,6 +1,6 @@
 <template>
   <form
-    class="auth__container"
+    class="aside__wrap"
     @submit.prevent="confirmCode"
   >
     <div class="d-flex align-items-center mb-15">

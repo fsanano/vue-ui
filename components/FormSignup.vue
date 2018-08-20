@@ -1,6 +1,6 @@
 <template>
   <form
-    class="auth__container"
+    class="aside__wrap"
     @submit.prevent="send()"
   >
     <div class="mb-15">

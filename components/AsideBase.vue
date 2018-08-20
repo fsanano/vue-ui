@@ -113,7 +113,7 @@ export default {
     overflow-y: auto
     padding-bottom: 30px
 
-  .auth__container
+  .aside__wrap
     padding: 30px
     .button--primary
       width: 100%

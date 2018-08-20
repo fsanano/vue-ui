@@ -3,7 +3,7 @@
     class="form__avatar"
     @submit.prevent="send()"
   >
-    <div class="avatar__title mb-15">
+    <div class="text text--bold mb-15">
       Выберите аватар или
       <InputFile v-model="custom">
         <span class="avatar__label">загрузите свой</span>
@@ -112,10 +112,6 @@ export default {
 
 <style lang="sass">
   @import '@/assets/sass/vars.sass'
-  .avatar__title
-    font-size: 20px
-    font-weight: bold
-
   .avatar__list
     display: flex
     flex-flow: row wrap

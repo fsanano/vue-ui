@@ -4,7 +4,10 @@
     title="Пополнение счета"
     name="refill"
   >
-    <div class="d-flex payment__container">
+    <div
+      v-if="step === 'choose'"
+      class="d-flex payment__container"
+    >
       <PaymentSystems
         :active="activePaymentSystem"
         :list="list"
@@ -12,6 +15,9 @@
       />
       <FormPayment :payload="form"/>
     </div>
+
+    <FormPaymentConfirm :payload="form"/>
+
   </AsideBase>
 </template>
 
@@ -20,6 +26,7 @@ import AsideBase from '@/components/AsideBase.vue';
 import IconBase from '@/components/IconBase.vue';
 import PaymentSystems from '@/components/PaymentSystems.vue';
 import FormPayment from '@/components/FormPayment.vue';
+import FormPaymentConfirm from '@/components/FormPaymentConfirm.vue';
 /**
  * Компонент сайдбара данных юзера
  */
@@ -30,6 +37,7 @@ export default {
     IconBase,
     PaymentSystems,
     FormPayment,
+    FormPaymentConfirm,
   },
   props: {
     status: {
@@ -40,6 +48,7 @@ export default {
   },
   data() {
     return {
+      step: 'choose',
       /**
        * Выбранная система оплаты
        */
