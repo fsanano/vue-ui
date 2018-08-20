@@ -1,8 +1,8 @@
 <template>
   <AsideBase
     :status="status"
-    title="Вывод средств"
-    name="withdrawal"
+    title="Пополнение счета"
+    name="refill"
   >
     <div
       v-if="step === 'choose'"
@@ -15,7 +15,6 @@
       />
       <FormPayment
         :payload="form"
-        type="withdrawal"
         @set="setStep('confirm')"
       />
     </div>
@@ -24,6 +23,7 @@
       v-if="step === 'confirm'"
       :payload="confirm"
     />
+
   </AsideBase>
 </template>
 
@@ -33,10 +33,10 @@ import PaymentSystems from '@/components/PaymentSystems.vue';
 import FormPayment from '@/components/FormPayment.vue';
 import FormPaymentConfirm from '@/components/FormPaymentConfirm.vue';
 /**
- * Компонент сайдбара данных юзера
+ * Компонент сайдбара для пополения счета пользователя 
  */
 export default {
-  name: 'AsideWithdrawal',
+  name: 'AsidePayment',
   components: {
     AsideBase,
     PaymentSystems,
@@ -163,11 +163,10 @@ export default {
 
 <style lang="sass" scoped>
   @import '@/assets/sass/vars.sass'
-
 </style>
 
 <docs>
 ```
-<AsideWithdrawal/>
+<AsidePayment/>
 ```
 </docs>

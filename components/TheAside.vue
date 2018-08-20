@@ -7,8 +7,8 @@
       <AsideSignin :status="signin"/>
       <AsideSignup :status="signup"/>
       <AsideProfile :status="profile"/>
-      <AsideRefill :status="refill"/>
-      <AsideWithdrawal :status="withdrawal"/>
+      <AsidePayment :status="refill"/>
+      <AsideWithdraw :status="withdrawal"/>
     </div>
   </transition>
 </template>
@@ -18,8 +18,8 @@ import { mapState } from 'vuex';
 import AsideSignin from '@/components/AsideSignin.vue';
 import AsideSignup from '@/components/AsideSignup.vue';
 import AsideProfile from '@/components/AsideProfile.vue';
-import AsideRefill from '@/components/AsideRefill.vue';
-import AsideWithdrawal from '@/components/AsideWithdrawal.vue';
+import AsidePayment from '@/components/AsidePayment.vue';
+import AsideWithdraw from '@/components/AsideWithdraw.vue';
 /**
  * Компонент конейнер для всех сайдбаров
  */
@@ -29,8 +29,8 @@ export default {
     AsideSignin,
     AsideSignup,
     AsideProfile,
-    AsideRefill,
-    AsideWithdrawal,
+    AsidePayment,
+    AsideWithdraw,
   },
   computed: {
     ...mapState({
