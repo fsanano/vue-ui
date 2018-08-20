@@ -4,8 +4,7 @@
       v-if="isVisible"
       class="aside__fancy"
     >
-      <AsideSignin :status="signin"/>
-      <AsideSignup :status="signup"/>
+      <AsideAuth :status="signup"/>
       <AsideProfile :status="profile"/>
       <AsidePayment :status="refill"/>
       <AsideWithdraw :status="withdrawal"/>
@@ -15,8 +14,7 @@
 
 <script>
 import { mapState } from 'vuex';
-import AsideSignin from '@/components/AsideSignin.vue';
-import AsideSignup from '@/components/AsideSignup.vue';
+import AsideAuth from '@/components/AsideAuth.vue';
 import AsideProfile from '@/components/AsideProfile.vue';
 import AsidePayment from '@/components/AsidePayment.vue';
 import AsideWithdraw from '@/components/AsideWithdraw.vue';
@@ -26,8 +24,7 @@ import AsideWithdraw from '@/components/AsideWithdraw.vue';
 export default {
   name: 'TheAside',
   components: {
-    AsideSignin,
-    AsideSignup,
+    AsideAuth,
     AsideProfile,
     AsidePayment,
     AsideWithdraw,

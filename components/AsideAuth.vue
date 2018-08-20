@@ -47,7 +47,7 @@ import FormCode from '@/components/FormCode.vue';
  * Компонент сайдбара для регистрации
  */
 export default {
-  name: 'AsideSignup',
+  name: 'AsideAuth',
   components: {
     AsideBase,
     FormSignup,
@@ -93,6 +93,6 @@ export default {
 
 <docs>
 ```
-<AsideSignup/>
+<AsideAuth/>
 ```
 </docs>
