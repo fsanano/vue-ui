@@ -134,6 +134,9 @@ export default {
 
   .auth-enter, .auth-leave-to
     opacity: 0
+
+  .payment__container
+    margin-bottom: -30px
 </style>
 
 <docs>

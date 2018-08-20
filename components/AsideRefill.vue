@@ -29,7 +29,6 @@
 
 <script>
 import AsideBase from '@/components/AsideBase.vue';
-import IconBase from '@/components/IconBase.vue';
 import PaymentSystems from '@/components/PaymentSystems.vue';
 import FormPayment from '@/components/FormPayment.vue';
 import FormPaymentConfirm from '@/components/FormPaymentConfirm.vue';
@@ -40,7 +39,6 @@ export default {
   name: 'AsideRefill',
   components: {
     AsideBase,
-    IconBase,
     PaymentSystems,
     FormPayment,
     FormPaymentConfirm,
@@ -165,9 +163,6 @@ export default {
 
 <style lang="sass" scoped>
   @import '@/assets/sass/vars.sass'
-
-  .payment__container
-    margin-bottom: -30px
 </style>
 
 <docs>

@@ -3,6 +3,12 @@
     class="payment__form"
     @submit.prevent
   >
+    <InputText
+      v-if="payload.payment.type === 'card' && type === 'withdrawal'"
+      v-model="userCard"
+      title="Номер карты"
+      class="mb-15"
+    />
     <InputPhone
       v-if="payload.payment.type === 'phone'"
       v-model="userPhone"
@@ -58,6 +64,18 @@ export default {
   mixins: [],
   props: {
     /**
+     * Тип формы отправка или прием
+     * @type {Object}
+     */
+    type: {
+      type: String,
+      required: false,
+      default: 'refill',
+      validator(value) {
+        return ['withdrawal', 'refill'].indexOf(value) !== -1;
+      },
+    },
+    /**
      * Список платежных систем
      */
     payload: {
@@ -75,7 +93,19 @@ export default {
        * @type {Object}
        */
       amount: '99',
+      /**
+       * Номер телефона пользователя
+       * @type {String}
+       */
       userPhone: '',
+      /**
+       * Номер карты пользователя
+       * @type {String}
+       */
+      userCard: '',
+      /**
+       * Список стран с телефонными кодами
+       */
       countryList,
     };
   },
