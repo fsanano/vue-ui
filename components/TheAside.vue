@@ -4,7 +4,7 @@
       v-if="isVisible"
       class="aside__fancy"
     >
-      <AsideAuth :status="signup"/>
+      <AsideAuth :status="auth"/>
       <AsideProfile :status="profile"/>
       <AsidePayment :status="refill"/>
       <AsideWithdraw :status="withdrawal"/>
@@ -33,7 +33,7 @@ export default {
     ...mapState({
       aside: state => state.aside,
       signin: state => state.aside.signin,
-      signup: state => state.aside.signup,
+      auth: state => state.aside.auth,
       profile: state => state.aside.profile,
       refill: state => state.aside.refill,
       withdrawal: state => state.aside.withdrawal,

@@ -53,7 +53,7 @@ export default {
       require: true,
       default: '',
       validator(name) {
-        return ['signin', 'signup', 'profile', 'refill', 'withdrawal'].indexOf(name) !== -1;
+        return ['auth', 'profile', 'refill', 'withdrawal'].indexOf(name) !== -1;
       },
     },
     /**

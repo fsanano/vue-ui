@@ -7,7 +7,7 @@ const state = () => ({
    * Флаг состояния аунтентификации пользователя
    * @type {Boolean}
    */
-  auth: true,
+  auth: false,
   /**
    * Данные пользователя
    * @type {Object}

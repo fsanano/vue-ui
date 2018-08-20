@@ -8,8 +8,7 @@ const state = () => ({
    * Флаги состояния видимости сайдбаров
    * @type {Boolean}
    */
-  signin: false,
-  signup: false,
+  auth: false,
   profile: false,
   refill: false,
   withdrawal: false,

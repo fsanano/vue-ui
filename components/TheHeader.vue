@@ -73,12 +73,12 @@
         <div class="btn__signin">
           <ButtonPlane
             size="large"
-            @click.native="openAside('signin')"
+            @click.native="openAside('auth')"
           >
             Вход
           </ButtonPlane>
         </div>
-        <ButtonPrimary @click.native="openAside('signup')">Регистрaция</ButtonPrimary>
+        <ButtonPrimary @click.native="openAside('auth')">Регистрaция</ButtonPrimary>
       </div>
     </div>
   </header>

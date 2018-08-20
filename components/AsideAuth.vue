@@ -1,7 +1,7 @@
 <template>
   <AsideBase
     :status="status"
-    name="signup"
+    name="auth"
     title="Регистарция"
   >
     <template>
@@ -78,7 +78,7 @@ export default {
       this.step = step;
     },
     close() {
-      this.$store.dispatch('aside/setAsideStatus', { name:'signup', status: false});
+      this.$store.dispatch('aside/setAsideStatus', { name:'auth', status: false});
     },
   },
 };
