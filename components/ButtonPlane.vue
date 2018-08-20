@@ -65,7 +65,10 @@ export default {
 
   .button__plane
     &.button__plane--small
-      font-size: 13px
+      font-size: 14px
+      font-weight: normal
+      line-height: 1.5
+      margin: 0 10px
 
     &.button__plane--normal
       font-size: 15px

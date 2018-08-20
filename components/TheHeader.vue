@@ -25,7 +25,51 @@
           </li>
         </ul>
       </div>
-      <div class="d-flex align-items-center">
+      <div
+        v-if="auth"
+        class="d-flex align-items-center"
+      >
+        <div class="header__balance">
+          <div class="balance__amount">12 ₽</div>
+          <div class="d-flex">
+            <ButtonPlane
+              size="small"
+            >
+              <IconBase
+                name="icon-pay-up"
+                size="custom"
+                class="balance__icon"
+              />
+              Пополнить
+            </ButtonPlane>
+            <ButtonPlane
+              size="small"
+            >
+              <IconBase
+                name="icon-pay-down"
+                size="custom"
+                class="balance__icon"
+              />
+              Снять
+            </ButtonPlane>
+          </div>
+        </div>
+        <ButtonPlane @click.native="openAside('profile')">
+          <div class="d-flex align-items-center">
+            <div class="account__avatar">
+              <img
+                src="avatars/boo.png"
+                alt="userAvatar"
+              >
+            </div>
+            <div class="account__name">Игрок 22911</div>
+          </div>
+        </ButtonPlane>
+      </div>
+      <div
+        v-else
+        class="d-flex align-items-center"
+      >
         <div class="btn__signin">
           <ButtonPlane
             size="large"
@@ -41,9 +85,12 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 import ButtonLight from '@/components/ButtonLight.vue';
 import ButtonPlane from '@/components/ButtonPlane.vue';
 import ButtonPrimary from '@/components/ButtonPrimary.vue';
+import IconBase from '@/components/IconBase.vue';
 /**
  * Компонент шапки
  */
@@ -53,6 +100,7 @@ export default {
     ButtonLight,
     ButtonPlane,
     ButtonPrimary,
+    IconBase,
   },
   data() {
     return {
@@ -78,6 +126,11 @@ export default {
         },
       ],
     };
+  },
+  computed: {
+    ...mapState({
+      auth: state => state.auth.auth,
+    }),
   },
   methods: {
     /**
@@ -140,6 +193,34 @@ export default {
         background-color: $accent
   .btn__signin
     margin: 0 28px
+
+  .header__balance
+    padding: 15px 0
+    height: 100%
+    background-color: rgba($primary-color, .1)
+
+  .balance__amount
+    padding: 0 15px
+    margin-bottom: 5px
+    font-size: 35px
+    font-weight: bold
+    line-height: 1
+
+  .balance__icon
+    width: 14px
+    height: 9px
+    margin-right: 7px
+
+  .account__avatar
+    width: 56px
+    height: 56px
+    margin: 0 15px
+    img
+      max-width: 100%
+      max-height: 100%
+
+  .account__name
+    font-size: 18px
 </style>
 
 <docs>
