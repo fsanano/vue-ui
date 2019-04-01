@@ -146,7 +146,6 @@ export default {
   methods: {
     /**
      * Метод переключения состоя
-     * @return {[type]} [description]
      */
     toggleDropdown() {
       this.showDropdown = !this.showDropdown;

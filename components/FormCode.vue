@@ -105,7 +105,6 @@ export default {
   methods: {
     /**
      * Отправка email
-     * @return {[type]} [description]
      */
     auth() {
       this.isCodeFormVisible = true;
@@ -113,7 +112,6 @@ export default {
     },
     /**
      * Подтверждение кода
-     * @return {[type]} [description]
      */
     confirmCode() {
       this.isCodeFormVisible = false;
@@ -121,7 +119,6 @@ export default {
     /**
      * Начало отсчета времени,
      * после которого можно заново запросить код подтверждения
-     * @return {[type]} [description]
      */
     startCountdown() {
       this.countdown = 60;

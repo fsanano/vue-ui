@@ -18,7 +18,7 @@
     "normalize.css": "^8.0.0",
     "nuxt": "^1.0.0",
     "nuxt-imagemin": "^0.1.2",
-    "outline.js": "github:lindsayevans/outline.js",
+    "remove-focus-outline": "^1.2.1",
     "svg-sprite-loader": "^3.8.0",
     "v-click-outside": "^1.0.5",
     "vue-the-mask": "^0.11.1"
@@ -29,9 +29,9 @@
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.7.1",
     "eslint-plugin-vue": "^4.0.0",
-    "node-sass": "^4.9.3",
+    "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
-    "vue-styleguidist": "^1.7.13",
+    "vue-styleguidist": "^3.11.2",
     "vue-webpack-loaders": "^1.0.8"
   }
 }

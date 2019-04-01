@@ -157,7 +157,6 @@ export default {
   methods: {
     /**
      * Выход из учетной записи
-     * @return {[type]} [description]
      */
     logout() {
       this.$store.dispatch('aside/setAsideStatus', { name: 'profile', status: false });
