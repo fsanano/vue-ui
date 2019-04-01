@@ -1,7 +1,3 @@
-# Xwin frontend
-
-## Ссылка на ветку [develop](https://xwin-frontend.netlify.com/)
-
 ## Build Setup
 
 ``` bash
